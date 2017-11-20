@@ -45,6 +45,7 @@ public class Direction
 	// If the NORTHWEST corner is active, the NORTH and WEST
 	// edges will also be active, but the converse is not true.
 
+
 	public static final Direction NORTH 	= new Immutable(BITS_NORTH);
 	public static final Direction SOUTH 	= new Immutable(BITS_SOUTH);
 	public static final Direction EAST 		= new Immutable(BITS_EAST);
