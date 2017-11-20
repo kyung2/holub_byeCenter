@@ -11,7 +11,15 @@ import com.holub.ui.MenuSite;
  */
 
 public final class Life extends JFrame
-{	
+{
+    /**
+     * sangwon 주석
+     * Life 클래스는 JFrame 상속받음
+     * Life를 메인으로 프로그램이 동작
+     * Menusite로 메뉴창을 만듦
+     * Universe로 기본 내용을 만듦
+     *
+     */
 	private static JComponent universe;
 
 	public static void main( String[] arguments )
