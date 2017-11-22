@@ -26,6 +26,14 @@ import com.holub.tools.Publisher;
  * @include /etc/license.txt
  */
 
+/**
+ * hyunkyung 주석
+ * Clock 이벤트를 처리하는 객체들 (Observer)에 주기적으로 클록 틱 (Clock Tick) 이벤트를 통지하다.
+ * 이 경우 Universe가 Action Listener 인터페이스를 구현한 익명의 내부 클래스를 통하여 이벤트를 받는다.
+ * Observer는 또한 자바의 메뉴시스템에서도 사용함.
+ * Observer의 주요 목적은 이벤트를 발생시키는 객체와 이벤트르 처리하는 객체간의 결합도 를 줄이는것!!!!!!!!!!
+ * 즉 옵져버패턴은 이벤트를 발생시키는 객체와 이벤트를 처리하는 객체 사이의 결합도를 줄인다는게 key Point ! */
+
 public class Clock
 {	private Timer			clock		= new Timer();
 	private TimerTask		tick		= null;
@@ -35,7 +43,8 @@ public class Clock
 	// are established.
 	//
 	private Clock()
-	{	createMenus();
+	{
+		createMenus();
 	}
 
 	private static Clock instance;
@@ -45,7 +54,8 @@ public class Clock
 	 *  <code>new Clock()</code>.
 	 */
 	public synchronized static Clock instance()
-	{	if( instance == null )
+	{
+		if( instance == null )
 			instance = new Clock();
 		return instance;
 	}
@@ -57,8 +67,10 @@ public class Clock
 	 */
 
 	public void startTicking( int millisecondsBetweenTicks )
-	{	if(tick != null)
-		{	tick.cancel();
+	{
+		if(tick != null)
+		{
+			tick.cancel();
 			tick=null;
 		}
 
@@ -74,12 +86,16 @@ public class Clock
 	 */
 
 	public void stop()
-	{	startTicking( 0 );
+	{
+		startTicking( 0 );
 	}
 
 	/** Create the menu that controls the clock speed and
 	 *  put it onto the menu site. 
 	 */
+
+	/**저기 주석은...왜..안나오지
+	 * hyunkyung 주석 아래 method의 역할은 이제 게임의 속도 조절하는 역할! */
 	private void createMenus()
 	{
 		// First set up a single listener that will handle all the
@@ -87,7 +103,8 @@ public class Clock
 
 		ActionListener modifier =									//{=startSetup}
 			new ActionListener()
-			{	public void actionPerformed(ActionEvent e)
+			{
+				public void actionPerformed(ActionEvent e)
 				{
 					String name = ((JMenuItem)e.getSource()).getName();
 					char toDo = name.charAt(0);
@@ -124,14 +141,16 @@ public class Clock
 	 *  </PRE>
 	 */
 	public void addClockListener( Listener observer )
-	{	publisher.subscribe(observer);
+	{
+		publisher.subscribe(observer);
 	}
 
 	/** Implement this interface to be notified about clock ticks.
 	 *  @see Clock
 	 */
 	public interface Listener
-	{	void tick();
+	{
+		void tick();
 	}
 
 	/** Force the clock to "tick," even if it's not time for
@@ -139,10 +158,13 @@ public class Clock
 	 *  stopped. (Life uses this for single stepping.)
 	 */
 	public void tick()
-	{	publisher.publish
+	{
+		publisher.publish
 		(	new Publisher.Distributor()
-			{	public void deliverTo( Object subscriber )
-				{	if( !menuIsActive() )
+			{
+				public void deliverTo( Object subscriber )
+				{
+					if( !menuIsActive() )
 						((Listener)subscriber).tick();
 				}
 			}
@@ -170,8 +192,8 @@ public class Clock
 	 */
 
 	private boolean menuIsActive()
-	{	MenuElement[] path =
-					MenuSelectionManager.defaultManager().getSelectedPath();
+	{
+		MenuElement[] path = MenuSelectionManager.defaultManager().getSelectedPath();
 		return ( path != null && path.length > 0 );
 	}
 }

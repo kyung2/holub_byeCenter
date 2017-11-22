@@ -9,7 +9,11 @@ import com.holub.ui.MenuSite;
  *
  * @include /etc/license.txt
  */
-
+/**
+ * hyunkyung 주석 Life Game 규칙 설명
+ * 1. 죽어 있는 셀은 정확히 3개의 이웃 셀이 살아있다면 살아난다.
+ * 2. 셀은 두개 혹은 세개의 이웃을 가지면 계속 살아있는 상태가 된다.
+ * 3. 이웃하는 셀이 한개 또는 4개이상이면 외롭거나 질식하여 죽는다. */
 public final class Life extends JFrame
 {
     /**
