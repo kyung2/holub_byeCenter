@@ -23,11 +23,13 @@ public final class Life extends JFrame
 	private static JComponent universe;
 
 	public static void main( String[] arguments )
-	{	new Life();
+	{
+		new Life();
 	}
 
 	private Life()
-	{	super( "The Game of Life. "
+	{
+		super( "The Game of Life. "
 					+"(c)2003 Allen I. Holub <http://www.holub.com>");
 
 		// Must establish the MenuSite very early in case
