@@ -38,6 +38,9 @@ public interface Cell
 	 */
 	Cell edge( int row, int column );
 
+	/**hyunkyung
+	 * 다음 세대에서 살아있을건지 안살아있을건지 판단
+	 * */
 	/** Transition to the state computed by the most recent call to
 	 *  {@link #figureNextState}
 	 *  @return true if a changed of state happened during the transition.

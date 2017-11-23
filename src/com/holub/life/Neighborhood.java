@@ -80,7 +80,8 @@ public final class Neighborhood implements Cell
 	 */
 
 	public Cell create()
-	{	return new Neighborhood(gridSize, grid[0][0]);
+	{
+		return new Neighborhood(gridSize, grid[0][0]);
 	}
 
 	/** Became stable on the last clock tick. One more refresh is
@@ -245,6 +246,8 @@ public final class Neighborhood implements Cell
 	}
 
 
+	/**hyunkyung 주석
+	 * Cell을 받아와서 이걸 다시 재정의하는부분 */
 	/** Transition the neighborhood to the previously-computed
 	 *  state.
 	 *  @return true if the transition actually changed anything.
