@@ -153,6 +153,9 @@ public class Clock
 		void tick();
 	}
 
+	/**싱글톤 팬턴
+	 * 해당 클래스의 인스터스 가 하나 만들어지고 어디서든지 그 인스턴스에 접근가능하게 하는 패턴
+	 * */
 	/** Force the clock to "tick," even if it's not time for
 	 *  a tick. Useful for forcing a tick when the clock is
 	 *  stopped. (Life uses this for single stepping.)
@@ -160,7 +163,8 @@ public class Clock
 	public void tick()
 	{
 		publisher.publish
-		(	new Publisher.Distributor()
+		(
+				new Publisher.Distributor()
 			{
 				public void deliverTo( Object subscriber )
 				{
@@ -170,6 +174,16 @@ public class Clock
 			}
 		);
 	}
+
+	/**hyunkyung 번역
+	 * 메뉴 표시 줄의 항목이 선택되었는지 확인
+	 * 스윙이 메인 프레임과 동일한 "캔버스"에 메뉴를 그려야한다. 결과적으로 표시된 메뉴는
+	 * 실행중인 게임으로 덮어 쓰인다.
+	 * 스윙은 일부 메뉴 항목이 선택되었다(이미선택되었다)
+	 * 라느 순서에 대한 경고를 제공하지 않는다. 메뉴 선택활동을 감지하는
+	 * 유일한 방법은
+	 * 일부 메뉴가 표시되면 true를 리턴한다.
+	 * {@link #tick} 메소드는 메뉴가 표시 될 때 클록 틱을 효과적으로 정지시킨다. */
 
 	/** Check if any item on the menu bar has been selected.
 	 *  This is an incredible kluge. The problem is that Swing draws the

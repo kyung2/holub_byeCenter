@@ -63,14 +63,21 @@ public interface Cell
 	 *  			rectangle of the current Cell.
 	 */
 
+	/**hyunkyung 주석
+	 * user클릭 Point랑 Rectangle이 있음.. 이걸로 보고 */
 	void userClicked(Point here, Rectangle surface);
 
 	/** Return true if this cell or any subcells are alive.
 	 */
+	/**살아있냐 안살아있냐 판단하는 TF Boolean 타입으로 판단*/
 	boolean isAlive();
 
 	/** Return the specified width plus the current cell's width
 	 */
+
+	/**
+	 *
+	 * */
 	int widthInCells();
 
 	/** Return a fresh (newly created) object identical to yourself
