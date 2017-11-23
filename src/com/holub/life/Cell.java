@@ -14,6 +14,11 @@ import com.holub.life.Storable;
 
 public interface Cell
 {
+    /**
+     * 나정 주석
+     * 셀은 한 칸을 의미한다
+     */
+
 	/** Figure out the next state of the cell, given the specified
 	 *  neighbors.
 	 *  @return true if the cell is unstable (changed state).
