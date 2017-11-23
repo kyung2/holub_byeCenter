@@ -33,7 +33,7 @@ import com.holub.tools.Publisher;
  * Observer는 또한 자바의 메뉴시스템에서도 사용함.
  * Observer의 주요 목적은 이벤트를 발생시키는 객체와 이벤트르 처리하는 객체간의 결합도 를 줄이는것!!!!!!!!!!
  * 즉 옵져버패턴은 이벤트를 발생시키는 객체와 이벤트를 처리하는 객체 사이의 결합도를 줄인다는게 key Point ! */
-
+//gusrud현경 한자가 좀 꺶;낟
 public class Clock
 {	private Timer			clock		= new Timer();
 	private TimerTask		tick		= null;
