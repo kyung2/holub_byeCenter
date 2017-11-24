@@ -19,6 +19,11 @@ public interface Cell
      * 셀은 한 칸을 의미한다
      */
 
+    /*sangwon
+    셀은 인터페이스이고 이걸 구현하는애는 네이버후드랑 레지던트임
+    생성은 각자 생성자가 있지만 실제론 create 함수로 만드는 의미가 더 크니까 create 도 생성자로 취급하는게 좋을듯
+
+     */
 	/** Figure out the next state of the cell, given the specified
 	 *  neighbors.
 	 *  @return true if the cell is unstable (changed state).

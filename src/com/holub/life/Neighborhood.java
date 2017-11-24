@@ -120,7 +120,7 @@ public final class Neighborhood implements Cell
 	 *  @return true if this neighborhood (i.e. any of it's cells)
 	 *  			 will change state in the next transition.
 	 */
-
+	//여기선 어 음
 	public boolean figureNextState(	Cell north, 	Cell south,
 									Cell east,		Cell west,
 									Cell northeast, Cell northwest,
@@ -223,8 +223,9 @@ public final class Neighborhood implements Cell
 					// returned false), then mark the current block as
 					// unstable. Also, if the unstable cell is on the
 					// edge of the block modify activeEdges to
-					//  indicate which edge or edges changed. 
+					//  indicate which edge or edges changed.
 
+					// sangwon 이거 왜 재귀냐???
 					if( grid[row][column].figureNextState
 						( northCell, 	 southCell,
 						  eastCell,	  	 westCell,

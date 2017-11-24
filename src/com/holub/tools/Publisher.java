@@ -61,6 +61,12 @@ package com.holub.tools;
  * @include /etc/license.txt
  */
 
+/**
+ *  sangwon 주석
+ *	이게 이 호럽 라이프게임의 옵저버임
+ *  여기서 좀 수정할 수 있으면 좋긴할듯
+ *  /TODO 여기서 좀 수정해보자
+ */
 public class Publisher
 {
 	public interface Distributor
