@@ -16,6 +16,9 @@ import com.holub.life.Neighborhood;
 import com.holub.life.Resident;
 
 /**
+ * hyunkyung : 싱글톤이어ㅇ야함.
+ * Universe.instance()통해서 접근해야함... */
+/**
  * The Universe is a mediator that sits between the Swing
  * event model and the Life classes. It is also a singleton,
  * accessed via Universe.instance(). It handles all
@@ -36,6 +39,10 @@ public class Universe extends JPanel
 	 *  to do. If it's too small, you have too many blocks to check.
 	 *  I've found that 8 is a good compromise.
 	 */
+	/**hyunkyung
+	 * grid 와 cell 사이즈는 8로 지정한다.
+	 *
+	 * */
 	private static final int  DEFAULT_GRID_SIZE = 8;
 
 	/** The size of the smallest "atomic" cell---a Resident object.
