@@ -51,6 +51,7 @@ public class Universe extends JPanel
 	 *sagnwon
      * 그리드 사이즈는 좀 쓸데없어보임 이거 좀 더 이쁘게 바꾸면 좋을듯
      * 이걸 지금은 2차배열로 만들었는데 아마 3차 배열하고 성능 테스트 해보는게 좋을듯
+	 * hyunkyung 3차원 배열을한다는게 몬대?
      *
 	 * */
 	private static final int  DEFAULT_GRID_SIZE = 8;
