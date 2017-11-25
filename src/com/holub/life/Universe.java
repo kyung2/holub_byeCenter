@@ -72,14 +72,13 @@ public class Universe extends JPanel
 		// on the screen.
 
 
-        /*
+        /**
         sangwon
         바로밑에 생성자를 보면 2차배열로 생성함
         같은 셀인 놈인 네이버후드 밑에 레지던스가 있는 구조가 트리처럼 되어잇음
         이건 마치 그 뭐냐 파일 트리했던 패턴임
         근데 그것보다 좀 더 **한듯
-
-         */
+		 */
 		outermostCell = new Neighborhood
 						(	DEFAULT_GRID_SIZE,
 							new Neighborhood
