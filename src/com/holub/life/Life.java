@@ -33,6 +33,7 @@ public final class Life extends JFrame
 
 	private Life()
 	{
+		//현경
 		super( "The Game of Life. "
 					+"(c)2003 Allen I. Holub <http://www.holub.com>");
 
