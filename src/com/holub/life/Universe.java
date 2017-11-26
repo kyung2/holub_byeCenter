@@ -68,7 +68,7 @@ public class Universe extends JPanel
 	private Universe()
 	{	// Create the nested Cells that comprise the "universe." A bug
 		// in the current implementation causes the program to fail
-		// miserably if the overall size of the grid is too big to fit
+		// miserably if the overall size of the grid is too big to fitzzzzez
 		// on the screen.
 
 
