@@ -39,7 +39,7 @@ public final class Life extends JFrame
 		// Must establish the MenuSite very early in case
 		// a subcomponent puts menus on it.
 
-		//hyunkyung size조절못하게함.!  
+		//hyunkyung size조절못하게함.!
 		setResizable(false);
 
 		MenuSite.establish( this );		//{=life.java.establish}
