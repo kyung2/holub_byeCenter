@@ -35,10 +35,13 @@ public final class Life extends JFrame
 	{
 		//현경
 		super( "The Game of Life. "
-					+"(c)2003 Allen I. Holub <http://www.holub.com>");
-
+					+"삼삼하조");
 		// Must establish the MenuSite very early in case
 		// a subcomponent puts menus on it.
+
+		//hyunkyung size조절못하게함.!  
+		setResizable(false);
+
 		MenuSite.establish( this );		//{=life.java.establish}
 
 		setDefaultCloseOperation	( EXIT_ON_CLOSE 		);

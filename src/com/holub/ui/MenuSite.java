@@ -923,6 +923,7 @@ public final class MenuSite
 
 			menuFrame.setJMenuBar( menuBar );
 			menuFrame.setVisible( true );
+
 			return menuBar;
 		}
 	}
