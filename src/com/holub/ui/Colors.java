@@ -55,12 +55,12 @@ public interface Colors
 /*** RGB=(0xff, 0x99, 0x00); <span style="background-color:#ff9900;">&nbsp;&nbsp;&nbsp;</span> */ static final Color MEDIUM_ORANGE = new Color(0xff, 0x99, 0x00);
 /*** RGB=(0xff, 0xcc, 0x00); <span style="background-color:#ffcc00;">&nbsp;&nbsp;&nbsp;</span> */ static final Color LIGHT_ORANGE  = new Color(0xff, 0xcc, 0x00);
 /*** RGB=(0xff, 0x99, 0x00); <span style="background-color:#ff9900;">&nbsp;&nbsp;&nbsp;</span> */ static final Color ORANGE 	   = new Color(0xff, 0x99, 0x00);
-
-/*** RGB=(0xcc, 0x99, 0x00); <span style="background-color:#cc9900;">&nbsp;&nbsp;&nbsp;</span> */ static final Color OCHRE         = new Color(0xcc, 0x99, 0x00); 
+/*** RGB=(0xff, 0x99, 0x00); <span style="background-color:#ff9900;">&nbsp;&nbsp;&nbsp;</span> */ static final Color ORANGE 	   = new Color(0xff, 0x99, 0x00);
+/*** RGB=(0xcc, 0x99, 0x00); <span style="background-color:#cc9900;">&nbsp;&nbsp;&nbsp;</span> */ static final Color OCHRE         = new Color(0xcc, 0x99, 0x00);
 /*** RGB=(0xff, 0xff, 0x00); <span style="background-color:#ffff00;">&nbsp;&nbsp;&nbsp;</span> */ static final Color DARK_YELLOW   = new Color(0xff, 0xff, 0x00);
 /*** RGB=(0xff, 0xff, 0x99); <span style="background-color:#ffff99;">&nbsp;&nbsp;&nbsp;</span> */ static final Color MEDIUM_YELLOW = new Color(0xff, 0xff, 0x99);
 /*** RGB=(0xff, 0xff, 0xdd); <span style="background-color:#ffffdd;">&nbsp;&nbsp;&nbsp;</span> */ static final Color LIGHT_YELLOW  = new Color(0xff, 0xff, 0xdd);
-
+/*** RGB=(246, 210, 88); <span style="background-color:#f6d258;">&nbsp;&nbsp;&nbsp;</span> */     static final Color PRIMROSE_YELLOW = new Color(246,210,88);
 /*** RGB=(0x00, 0x66, 0x00); <span style="background-color:#006600;">&nbsp;&nbsp;&nbsp;</span> */ static final Color DARK_GREEN    = new Color(0x00, 0x66, 0x00);
 /*** RGB=(0x00, 0x99, 0x00); <span style="background-color:#009900;">&nbsp;&nbsp;&nbsp;</span> */ static final Color MEDIUM_GREEN  = new Color(0x00, 0x99, 0x00);
 /*** RGB=(0x00, 0xff, 0x00); <span style="background-color:#00ff00;">&nbsp;&nbsp;&nbsp;</span> */ static final Color LIGHT_GREEN   = new Color(0x00, 0xff, 0x00);
@@ -74,4 +74,5 @@ public interface Colors
 /*** RGB=(0xcc, 0x00, 0xff); <span style="background-color:#cc00ff;">&nbsp;&nbsp;&nbsp;</span> */ static final Color MEDIUM_PURPLE = new Color(0xcc, 0x00, 0xff);
 /*** RGB=(0xcc, 0x99, 0xff); <span style="background-color:#cc99ff;">&nbsp;&nbsp;&nbsp;</span> */ static final Color LIGHT_PURPLE  = new Color(0xcc, 0x99, 0xff);
 /*** RGB=(0xcc, 0x00, 0xff); <span style="background-color:#cc00ff;">&nbsp;&nbsp;&nbsp;</span> */ static final Color PURPLE 	   = MEDIUM_PURPLE;
+
 }
