@@ -221,3 +221,4 @@ public class Clock
 		return ( path != null && path.length > 0 );
 	}
 }
+//안녕 내이름은 최현경이야 

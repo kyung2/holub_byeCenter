@@ -103,7 +103,10 @@ public class Universe extends JPanel
 //
 //						);
 
-		final Dimension PREFERRED_SIZE = // sangwon 이거 사실
+		final Dimension PREFERRED_SIZE =
+				//** sangwon 이거 tktlf  이거 사실//현경 경 경
+
+
 						new Dimension
 						(  outermostCell.widthInCells() * DEFAULT_CELL_SIZE,
 						   outermostCell.widthInCells() * DEFAULT_CELL_SIZE
