@@ -40,13 +40,14 @@ public final class Life extends JFrame
 		// a subcomponent puts menus on it.
 
 		//hyunkyung size조절못하게함.!
-		setResizable(false);
+//		setResizable(false);
 
 		MenuSite.establish( this );		//{=life.java.establish}
 
 		setDefaultCloseOperation	( EXIT_ON_CLOSE 		);
 		getContentPane().setLayout	( new BorderLayout()	);
 		getContentPane().add( Universe.instance(), BorderLayout.CENTER); //{=life.java.install}
+		setPreferredSize(new Dimension(900,800));
 
 		pack();
 		setVisible( true );

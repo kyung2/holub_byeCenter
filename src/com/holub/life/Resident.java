@@ -18,10 +18,13 @@ import com.holub.life.Universe;
 
 public final class Resident implements Cell
 {
+
+	//hyunkyung 색깔을 지정하는것을 팩토리패턴을 만들면될듯... 그러면 다이얼로그창?하나 더 만들면 될듯...
+
 	private static final Color BORDER_COLOR = Colors.DARK_YELLOW;
-	//private static final Color BORDER_COLOR = Colors.MEDIUM_ORANGE;
+	//private static final Color BORDER_COLOR = Colors.BLAZINGORANGE;
 	private static final Color LIVE_COLOR 	= Color.RED;
-	private static final Color DEAD_COLOR   = Colors.LIGHT_YELLOW;
+	private static final Color DEAD_COLOR   = Colors.LIGHT_ORANGE;
 
 	private boolean amAlive 	= false;
 	private boolean willBeAlive	= false;

@@ -54,7 +54,9 @@ public class Universe extends JPanel
 	 * hyunkyung 3차원 배열을한다는게 몬대?
      *
 	 * */
-	private static final int  DEFAULT_GRID_SIZE = 8;
+
+	//현경 : 팩토리..? 아니면 우선 grid size 을 팩토리로 따로 빼면..
+	private static final int  DEFAULT_GRID_SIZE = 4;
 
 	/** The size of the smallest "atomic" cell---a Resident object.
 	 *  This size is extrinsic to a Resident (It's passed into the
@@ -79,6 +81,7 @@ public class Universe extends JPanel
         이건 마치 그 뭐냐 파일 트리했던 패턴임
         근데 그것보다 좀 더 **한듯
 		 */
+        /**
 		outermostCell = new Neighborhood
 						(	DEFAULT_GRID_SIZE,
 							new Neighborhood
@@ -86,17 +89,21 @@ public class Universe extends JPanel
 								new Resident()
 							)
 						);
-//		outermostCell = new Neighborhood
-//            (	DEFAULT_GRID_SIZE,
-//                    new Neighborhood
-//                            (	DEFAULT_GRID_SIZE,
-//                                    new Neighborhood
-//                                            (	DEFAULT_GRID_SIZE,
-//                                                    new Resident()
-//                                            )
-//                            )
-//            );
-//        outermostCell = new Neighborhood
+
+		*/
+
+			outermostCell = new Neighborhood
+            (	DEFAULT_GRID_SIZE,
+                    new Neighborhood
+                            (	DEFAULT_GRID_SIZE,
+                                    new Neighborhood
+                                            (	DEFAULT_GRID_SIZE,
+                                                    new Resident()
+                                            )
+                            )
+            );
+
+		//        outermostCell = new Neighborhood
 //						(
 //								DEFAULT_GRID_SIZE,
 //								new Resident()
@@ -278,7 +285,8 @@ public class Universe extends JPanel
 	 */
 
 	private void refreshNow()
-	{	SwingUtilities.invokeLater
+	{
+		SwingUtilities.invokeLater
 		(	new Runnable()
 			{	public void run()
 				{	Graphics g = getGraphics();
