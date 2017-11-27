@@ -422,9 +422,10 @@ public final class Neighborhood implements Cell
 		amActive = true;
 		rememberThatCellAtEdgeChangedState(row, column);
 	}
-
+//neighborhood cell
 	public boolean isAlive()
-	{	return true;
+	{
+		return true;
 	}
 
 	public int widthInCells()
@@ -444,6 +445,7 @@ public final class Neighborhood implements Cell
 	/** Cause subcells to add an annotation to the indicated
 	 *  memento if they happen to be alive.
 	 */
+
 
 	public boolean transfer(Storable memento, Point corner,
 														boolean load)
@@ -470,7 +472,8 @@ public final class Neighborhood implements Cell
 	}
 
 	public Storable createMemento()
-	{	Memento m = new NeighborhoodState();
+	{
+		Memento m = new NeighborhoodState();
 		transfer(m, new Point(0,0), Cell.STORE);
 		return m;
 	}
@@ -483,15 +486,18 @@ public final class Neighborhood implements Cell
 	 */
 
 	private static class NeighborhoodState implements Cell.Memento
-	{	Collection liveCells = new LinkedList();
+	{
+		Collection liveCells = new LinkedList();
 
 		public NeighborhoodState( InputStream in ) throws IOException
 												{ load(in); }
 		public NeighborhoodState( 			   ){			}
 
 		public void load( InputStream in ) throws IOException
-		{	try
-			{	ObjectInputStream source = new ObjectInputStream( in );
+		{
+			try
+			{
+				ObjectInputStream source = new ObjectInputStream( in );
 				liveCells = (Collection)( source.readObject() );
 			}
 			catch(ClassNotFoundException e)
@@ -507,20 +513,24 @@ public final class Neighborhood implements Cell
 		}
 
 		public void flush( OutputStream out ) throws IOException
-		{	ObjectOutputStream sink = new ObjectOutputStream(out);
+		{
+			ObjectOutputStream sink = new ObjectOutputStream(out);
 			sink.writeObject( liveCells );
 		}
 	
 		public void markAsAlive(Point location)
-		{	liveCells.add( new Point( location ) );
+		{
+			liveCells.add( new Point( location ) );
 		}
 
 		public boolean isAlive(Point location)
-		{	return liveCells.contains(location);
+		{
+			return liveCells.contains(location);
 		}
 
 		public String toString()
-		{	StringBuffer b = new StringBuffer();
+		{
+			StringBuffer b = new StringBuffer();
 
 			b.append("NeighborhoodState:\n");
 			for( Iterator i = liveCells.iterator(); i.hasNext() ;)
