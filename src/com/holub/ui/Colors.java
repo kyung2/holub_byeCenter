@@ -89,7 +89,12 @@ public interface Colors
 //hyunkyung 2016 pantone color for color picker (not yet)
     static final Color ROSE_QUARTZ = new Color (247,202,201); //f7cac9
     static final Color SERENITY = new Color(154,168,209); // 92a8d1
-    
+
+    //hyunkyung pantone color chart Yellow
+    static final Color SUNSHINE = new Color(250,222,133); //fade85
+    static final Color CITRUS = new Color (255,176,37); //FFB025
+    static final Color LEMONCHROME = new Color (255,198,0); //ffc600
+    static final Color BLAZINGORANGE = new Color (255,164,74); //ffa44a
 
 
 }
