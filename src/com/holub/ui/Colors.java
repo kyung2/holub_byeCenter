@@ -87,5 +87,9 @@ public interface Colors
     static final Color LAPIS_BLUE = new Color(12,76,138); //0c4c8a
 
 //hyunkyung 2016 pantone color for color picker (not yet)
+    static final Color ROSE_QUARTZ = new Color (247,202,201); //f7cac9
+    static final Color SERENITY = new Color(154,168,209); // 92a8d1
     
+
+
 }
