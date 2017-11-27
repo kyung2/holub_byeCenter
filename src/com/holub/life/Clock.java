@@ -43,7 +43,7 @@ import com.holub.tools.Publisher;
  * //TODO 저 싱크로나이즈드 수정하면 하나 나옴
  *
  */
-//lkl ㅣㅓㅣㅏㅣl
+
 public class Clock
 {
 	private Timer			clock		= new Timer();
@@ -106,6 +106,9 @@ public class Clock
 
 	/**저기 주석은...왜..안나오지
 	 * hyunkyung 주석 아래 method의 역할은 이제 게임의 속도 조절하는 역할! */
+
+	//hyunkyung 수정
+
 	private void createMenus()
 	{
 		// First set up a single listener that will handle all the
