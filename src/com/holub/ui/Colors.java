@@ -98,7 +98,29 @@ public interface Colors
 
 
     //hyunkyung pantone color chart RED
-    // static final Color GRENADINE = new Color ()
+    static final Color LIGHTSALMON = new Color (255,160,122); //ffa07a
+    static final Color SALMON = new Color(250,128,114); //fa8072
+    static final Color DARKSALMON = new Color(233,150,122); //e9967a
+    static final Color LIGHTCORAL = new Color (240,128,128); // f0808
+    static final Color INDIANRED = new Color (240,128,128); //cd5c5c
+    static final Color CRIMSON = new Color (220,20,60); //dc143c;
+    static final Color FIREBRICK = new Color (178,34,34); //b22222
+    static final Color MAROON = new Color(128,0,0); // 80000
+    static final Color DARKRED = new Color(139,0,0);// 8b0000
+    static final Color TOMATO = new Color(255,99,71); // ff6347
+    static final Color PALEVIOLETRED = new Color(219,112,147); //db7093
+
+
+    //hyunkyung color chart BLUE
+    static final Color ALICEBLUE = new Color(240,248,255); //f0f8ff
+    static final Color LAVENDER = new Color (230,230,250);
+    static final Color POWDERBLUE = new Color(176,224,230);
+
+
+    
+
+
+
     //hyunkyung for cell color
 
 
