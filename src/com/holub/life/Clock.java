@@ -34,14 +34,23 @@ import com.holub.tools.Publisher;
  * Observer의 주요 목적은 이벤트를 발생시키는 객체와 이벤트르 처리하는 객체간의 결합도 를 줄이는것!!!!!!!!!!
  * 즉 옵져버패턴은 이벤트를 발생시키는 객체와 이벤트를 처리하는 객체 사이의 결합도를 줄인다는게 key Point ! */
 
+/**
+ * sangwon 0001
+ * 현경이가 말했듯 옵저버 사용중인 클래스
+ * 옵저버 관리 클래스는 tools의 Publisher
+ * 클록은 또한 싱글톤 객체인데 얘는 싱크로나이즈드로 관리함
+ * 이는 불릴때마다 성능 이슈가 있을 수 있는 구조라고 배웠음
+ * //TODO 저 싱크로나이즈드 수정하면 하나 나옴
+ *
+ */
+
 public class Clock
-{	private Timer			clock		= new Timer();
+{
+	private Timer			clock		= new Timer();
 	private TimerTask		tick		= null;
 
 	// The clock can't be an everything-is-static singleton because
-	// it creates a menu, and it can't do that until the menus
-	// are established.
-	//
+	// it creates a menu, and it can't -
 	private Clock()
 	{
 		createMenus();
@@ -49,6 +58,7 @@ public class Clock
 
 	private static Clock instance;
 
+	//Clock
 	/** The clock is a singleton. Get a reference to it by calling
 	 *  <code>Clock.instance()</code>. It's illegal to call
 	 *  <code>new Clock()</code>.
@@ -96,6 +106,9 @@ public class Clock
 	 */
 	/**저기 주석은...왜..안나오지
 	 * hyunkyung 주석 아래 method의 역할은 이제 게임의 속도 조절하는 역할! */
+
+	//hyunkyung 수정
+
 	private void createMenus()
 	{
 		// First set up a single listener that will handle all the
@@ -153,6 +166,9 @@ public class Clock
 		void tick();
 	}
 
+	/**싱글톤 팬턴
+	 * 해당 클래스의 인스터스 가 하나 만들어지고 어디서든지 그 인스턴스에 접근가능하게 하는 패턴
+	 * */
 	/** Force the clock to "tick," even if it's not time for
 	 *  a tick. Useful for forcing a tick when the clock is
 	 *  stopped. (Life uses this for single stepping.)
@@ -160,7 +176,8 @@ public class Clock
 	public void tick()
 	{
 		publisher.publish
-		(	new Publisher.Distributor()
+		(
+				new Publisher.Distributor()
 			{
 				public void deliverTo( Object subscriber )
 				{
@@ -170,6 +187,16 @@ public class Clock
 			}
 		);
 	}
+
+	/**hyunkyung 번역
+	 * 메뉴 표시 줄의 항목이 선택되었는지 확인
+	 * 스윙이 메인 프레임과 동일한 "캔버스"에 메뉴를 그려야한다. 결과적으로 표시된 메뉴는
+	 * 실행중인 게임으로 덮어 쓰인다.
+	 * 스윙은 일부 메뉴 항목이 선택되었다(이미선택되었다)
+	 * 라느 순서에 대한 경고를 제공하지 않는다. 메뉴 선택활동을 감지하는
+	 * 유일한 방법은
+	 * 일부 메뉴가 표시되면 true를 리턴한다.
+	 * {@link #tick} 메소드는 메뉴가 표시 될 때 클록 틱을 효과적으로 정지시킨다. */
 
 	/** Check if any item on the menu bar has been selected.
 	 *  This is an incredible kluge. The problem is that Swing draws the
@@ -197,3 +224,4 @@ public class Clock
 		return ( path != null && path.length > 0 );
 	}
 }
+//현경

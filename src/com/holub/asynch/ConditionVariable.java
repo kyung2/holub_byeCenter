@@ -22,6 +22,12 @@ package com.holub.asynch;
  *	@include c:/etc/license.txt
  */
 
+/**
+ * sangwon주석
+ * 이거 좀 신기한 클래스인데 비동기 구성할때 서로 싱크 안맞는거 수정하려고 하는듯
+ * 이부분도 한번 보면 좋을듯
+ * //TODO 싱크 부분 조금 더 이쁘게 바꿀 수 있을듯 
+ */
 public class ConditionVariable
 {	private volatile boolean isTrue;
 

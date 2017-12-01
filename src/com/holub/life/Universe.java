@@ -16,6 +16,16 @@ import com.holub.life.Neighborhood;
 import com.holub.life.Resident;
 
 /**
+ * hyunkyung : 싱글톤이어ㅇ야함. \
+ * Universe.instance()통해서 접근해야함... */
+/**
+ * sagnwon : 이미 싱글톤인 상태
+ * 이게 프로그램 시작시에 싱글톤 객체를 만듦
+ * 배운대로라면 이게 안쓰는데도 메모리에 용량 차지하면 문제인데
+ * 이건 항상 쓰이기 때문에 문제 없는듯
+ */
+
+/**
  * The Universe is a mediator that sits between the Swing
  * event model and the Life classes. It is also a singleton,
  * accessed via Universe.instance(). It handles all
@@ -36,7 +46,17 @@ public class Universe extends JPanel
 	 *  to do. If it's too small, you have too many blocks to check.
 	 *  I've found that 8 is a good compromise.
 	 */
-	private static final int  DEFAULT_GRID_SIZE = 8;
+	/**hyunkyung
+	 * grid 와 cell 사이즈는 8로 지정한다.
+	 *sagnwon
+     * 그리드 사이즈는 좀 쓸데없어보임 이거 좀 더 이쁘게 바꾸면 좋을듯
+     * 이걸 지금은 2차배열로 만들었는데 아마 3차 배열하고 성능 테스트 해보는게 좋을듯
+	 * hyunkyung 3차원 배열을한다는게 몬대?
+     *
+	 * */
+
+	//현경 : 팩토리..? 아니면 우선 grid size 을 팩토리로 따로 빼면..
+	private static final int  DEFAULT_GRID_SIZE = 4;
 
 	/** The size of the smallest "atomic" cell---a Resident object.
 	 *  This size is extrinsic to a Resident (It's passed into the
@@ -50,9 +70,18 @@ public class Universe extends JPanel
 	private Universe()
 	{	// Create the nested Cells that comprise the "universe." A bug
 		// in the current implementation causes the program to fail
-		// miserably if the overall size of the grid is too big to fit
+		// miserably if the overall size of the grid is too big to fitzzzzez
 		// on the screen.
 
+
+        /**
+        sangwon
+        바로밑에 생성자를 보면 2차배열로 생성함
+        같은 셀인 놈인 네이버후드 밑에 레지던스가 있는 구조가 트리처럼 되어잇음
+        이건 마치 그 뭐냐 파일 트리했던 패턴임
+        근데 그것보다 좀 더 **한듯
+		 */
+        /**
 		outermostCell = new Neighborhood
 						(	DEFAULT_GRID_SIZE,
 							new Neighborhood
@@ -61,7 +90,30 @@ public class Universe extends JPanel
 							)
 						);
 
+		*/
+
+			outermostCell = new Neighborhood
+            (	DEFAULT_GRID_SIZE,
+                    new Neighborhood
+                            (	DEFAULT_GRID_SIZE,
+                                    new Neighborhood
+                                            (	DEFAULT_GRID_SIZE,
+                                                    new Resident()
+                                            )
+                            )
+            );
+
+		//        outermostCell = new Neighborhood
+//						(
+//								DEFAULT_GRID_SIZE,
+//								new Resident()
+//
+//						);
+
 		final Dimension PREFERRED_SIZE =
+				//** sangwon 이거 tktlf  이거 사실//현경 경 경
+
+
 						new Dimension
 						(  outermostCell.widthInCells() * DEFAULT_CELL_SIZE,
 						   outermostCell.widthInCells() * DEFAULT_CELL_SIZE
@@ -233,7 +285,8 @@ public class Universe extends JPanel
 	 */
 
 	private void refreshNow()
-	{	SwingUtilities.invokeLater
+	{
+		SwingUtilities.invokeLater
 		(	new Runnable()
 			{	public void run()
 				{	Graphics g = getGraphics();

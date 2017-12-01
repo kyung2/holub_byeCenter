@@ -80,7 +80,8 @@ public final class Neighborhood implements Cell
 	 */
 
 	public Cell create()
-	{	return new Neighborhood(gridSize, grid[0][0]);
+	{
+		return new Neighborhood(gridSize, grid[0][0]);
 	}
 
 	/** Became stable on the last clock tick. One more refresh is
@@ -119,7 +120,7 @@ public final class Neighborhood implements Cell
 	 *  @return true if this neighborhood (i.e. any of it's cells)
 	 *  			 will change state in the next transition.
 	 */
-
+	//여기선 어 음
 	public boolean figureNextState(	Cell north, 	Cell south,
 									Cell east,		Cell west,
 									Cell northeast, Cell northwest,
@@ -222,8 +223,9 @@ public final class Neighborhood implements Cell
 					// returned false), then mark the current block as
 					// unstable. Also, if the unstable cell is on the
 					// edge of the block modify activeEdges to
-					//  indicate which edge or edges changed. 
+					//  indicate which edge or edges changed.
 
+					// sangwon 이거 왜 재귀냐???
 					if( grid[row][column].figureNextState
 						( northCell, 	 southCell,
 						  eastCell,	  	 westCell,
@@ -245,6 +247,8 @@ public final class Neighborhood implements Cell
 	}
 
 
+	/**hyunkyung 주석
+	 * Cell을 받아와서 이걸 다시 재정의하는부분 */
 	/** Transition the neighborhood to the previously-computed
 	 *  state.
 	 *  @return true if the transition actually changed anything.
@@ -418,9 +422,10 @@ public final class Neighborhood implements Cell
 		amActive = true;
 		rememberThatCellAtEdgeChangedState(row, column);
 	}
-
+//neighborhood cell
 	public boolean isAlive()
-	{	return true;
+	{
+		return true;
 	}
 
 	public int widthInCells()
@@ -440,6 +445,7 @@ public final class Neighborhood implements Cell
 	/** Cause subcells to add an annotation to the indicated
 	 *  memento if they happen to be alive.
 	 */
+
 
 	public boolean transfer(Storable memento, Point corner,
 														boolean load)
@@ -466,7 +472,8 @@ public final class Neighborhood implements Cell
 	}
 
 	public Storable createMemento()
-	{	Memento m = new NeighborhoodState();
+	{
+		Memento m = new NeighborhoodState();
 		transfer(m, new Point(0,0), Cell.STORE);
 		return m;
 	}
@@ -479,15 +486,18 @@ public final class Neighborhood implements Cell
 	 */
 
 	private static class NeighborhoodState implements Cell.Memento
-	{	Collection liveCells = new LinkedList();
+	{
+		Collection liveCells = new LinkedList();
 
 		public NeighborhoodState( InputStream in ) throws IOException
 												{ load(in); }
 		public NeighborhoodState( 			   ){			}
 
 		public void load( InputStream in ) throws IOException
-		{	try
-			{	ObjectInputStream source = new ObjectInputStream( in );
+		{
+			try
+			{
+				ObjectInputStream source = new ObjectInputStream( in );
 				liveCells = (Collection)( source.readObject() );
 			}
 			catch(ClassNotFoundException e)
@@ -503,20 +513,24 @@ public final class Neighborhood implements Cell
 		}
 
 		public void flush( OutputStream out ) throws IOException
-		{	ObjectOutputStream sink = new ObjectOutputStream(out);
+		{
+			ObjectOutputStream sink = new ObjectOutputStream(out);
 			sink.writeObject( liveCells );
 		}
 	
 		public void markAsAlive(Point location)
-		{	liveCells.add( new Point( location ) );
+		{
+			liveCells.add( new Point( location ) );
 		}
 
 		public boolean isAlive(Point location)
-		{	return liveCells.contains(location);
+		{
+			return liveCells.contains(location);
 		}
 
 		public String toString()
-		{	StringBuffer b = new StringBuffer();
+		{
+			StringBuffer b = new StringBuffer();
 
 			b.append("NeighborhoodState:\n");
 			for( Iterator i = liveCells.iterator(); i.hasNext() ;)

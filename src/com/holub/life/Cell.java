@@ -19,6 +19,11 @@ public interface Cell
      * 셀은 한 칸을 의미한다
      */
 
+    /*sangwon
+    셀은 인터페이스이고 이걸 구현하는애는 네이버후드랑 레지던트임
+    생성은 각자 생성자가 있지만 실제론 create 함수로 만드는 의미가 더 크니까 create 도 생성자로 취급하는게 좋을듯
+
+     */
 	/** Figure out the next state of the cell, given the specified
 	 *  neighbors.
 	 *  @return true if the cell is unstable (changed state).
@@ -38,6 +43,9 @@ public interface Cell
 	 */
 	Cell edge( int row, int column );
 
+	/**hyunkyung
+	 * 다음 세대에서 살아있을건지 안살아있을건지 판단
+	 * */
 	/** Transition to the state computed by the most recent call to
 	 *  {@link #figureNextState}
 	 *  @return true if a changed of state happened during the transition.
@@ -63,14 +71,21 @@ public interface Cell
 	 *  			rectangle of the current Cell.
 	 */
 
+	/**hyunkyung 주석
+	 * user클릭 Point랑 Rectangle이 있음.. 이걸로 보고 */
 	void userClicked(Point here, Rectangle surface);
 
 	/** Return true if this cell or any subcells are alive.
 	 */
+	/**살아있냐 안살아있냐 판단하는 TF Boolean 타입으로 판단*/
 	boolean isAlive();
 
 	/** Return the specified width plus the current cell's width
 	 */
+
+	/**
+	 *
+	 * */
 	int widthInCells();
 
 	/** Return a fresh (newly created) object identical to yourself
