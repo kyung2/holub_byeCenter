@@ -13,7 +13,7 @@ public class Files
 {
 	/*sangwon
 	 * 파일로 저장하는건데 싱크로나이즈드 이슈 있을수도
-	 * MVC 패턴으로 좀 수정해도 좋을수도
+	 * MVC 패턴으로 좀 수정해도
 	 */
 	/** Throw up a file choser and return the file that the user selects.
 	 *  @param extension File extension (text following the rightmost
