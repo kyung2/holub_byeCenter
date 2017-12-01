@@ -15,6 +15,7 @@ import com.holub.tools.Publisher;
  * clock "ticks."
  *
  * <h2>Revisions</h2>
+ *
  * <p>
  * 12-8-2004	AIH	Added a kludge to the clock-tick handler that
  * 				checks whether any menu item is active before it
@@ -83,6 +84,8 @@ public class Clock
 			tick.cancel();
 			tick=null;
 		}
+
+
 
 		if( millisecondsBetweenTicks > 0 )
 		{	tick =	new TimerTask()
@@ -173,6 +176,7 @@ public class Clock
 	 *  a tick. Useful for forcing a tick when the clock is
 	 *  stopped. (Life uses this for single stepping.)
 	 */
+
 	public void tick()
 	{
 		publisher.publish
