@@ -193,6 +193,7 @@ public class Universe extends JPanel
 			}
 		);
 
+		//클록 틱 이벤트 구독
 		Clock.instance().addClockListener //{=Universe.clock.subscribe}
 		(	new Clock.Listener()
 			{	public void tick()

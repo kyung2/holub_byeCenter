@@ -44,7 +44,7 @@ import com.holub.tools.Publisher;
  * //TODO 저 싱크로나이즈드 수정하면 하나 나옴
  *
  */
-
+//clock - observer, listener(observer)-concrete observer or subscriber
 public class Clock
 {
 	private Timer			clock		= new Timer();
@@ -64,6 +64,7 @@ public class Clock
 	 *  <code>Clock.instance()</code>. It's illegal to call
 	 *  <code>new Clock()</code>.
 	 */
+	//싱글톤 접근 메소드
 	public synchronized static Clock instance()
 	{
 		if( instance == null )
@@ -91,6 +92,7 @@ public class Clock
 		{	tick =	new TimerTask()
 					{	public void run(){ tick(); }
 					};
+		//task, delay, period
 			clock.scheduleAtFixedRate( tick, 0, millisecondsBetweenTicks);
 		}
 	}
@@ -134,14 +136,17 @@ public class Clock
 										toDo=='F' ? 30 : 0 ); // fast
 				}
 			};
-																	// {=midSetup}
+
+		//메뉴 추가
+																							// {=midSetup}
 		MenuSite.addLine(this,"Go","Halt",  			modifier);
 		MenuSite.addLine(this,"Go","Tick (Single Step)",modifier);
 		MenuSite.addLine(this,"Go","Agonizing",	 	  	modifier);
 		MenuSite.addLine(this,"Go","Slow",		 		modifier);
 		MenuSite.addLine(this,"Go","Medium",	 	 	modifier);
-		MenuSite.addLine(this,"Go","Fast",				modifier); // {=endSetup}
-	}	//{=endCreateMenus}
+		MenuSite.addLine(this,"Go","Fast",				modifier);
+// {=endSetup}
+}	//{=endCreateMenus}
 
 	private Publisher publisher = new Publisher();
 
