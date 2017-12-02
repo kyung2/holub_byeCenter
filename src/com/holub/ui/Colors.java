@@ -45,6 +45,8 @@ import java.awt.*;
  * @see java.awt.Color
  */
 
+//interface로 하면 모든 변수가 public static final 이라서 class기능만 하는 interface 변수만 담아놓은 클래스를
+    //편히 쓸려고 interface로 만들었다.!
 public interface Colors
 {
 /*** RGB=(0x99, 0x00, 0x00); <span style="background-color:#990000;">&nbsp;&nbsp;&nbsp;</span> */ static final Color DARK_RED	   = new Color(0x99, 0x00, 0x00);
@@ -115,11 +117,6 @@ public interface Colors
     static final Color ALICEBLUE = new Color(240,248,255); //f0f8ff
     static final Color LAVENDER = new Color (230,230,250);
     static final Color POWDERBLUE = new Color(176,224,230);
-
-
-
-
-
 
     //hyunkyung for cell color
 
