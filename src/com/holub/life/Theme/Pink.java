@@ -2,7 +2,7 @@ package com.holub.life.Theme;
 
 import java.awt.*;
 
-public class Red implements ITheme {
+public class Pink implements ITheme {
     //cell
     Color c;
     public Color getLive_Color () {

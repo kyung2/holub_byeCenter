@@ -27,6 +27,11 @@ public class Green implements ITheme {
         return c;
     }
 
+    public Color getRedraw_Selection_Graphic() {
+
+        return c;
+    }
+
     //universe
     public Color getBackGround_Color() {
 
