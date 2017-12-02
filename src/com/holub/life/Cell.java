@@ -51,7 +51,7 @@ public interface Cell
 	 *  @return true if a changed of state happened during the transition.
 	 */
 	boolean transition();
-
+	void changeCanvas(int gridSize);
 	/** Redraw yourself in the indicated
 	 *  rectangle on the indicated Graphics object if ncessary. This
 	 *  method is meant for a conditional redraw, where some of the
@@ -167,6 +167,7 @@ public interface Cell
 		public void 	 clear()		   	{						  }
 		public int 		 widthInCells()  	{return 0;				  }
 		public boolean	 transition()		{return false;			  }
+		public void 	 changeCanvas(int gridSize)	{			      }
 
 		public void	userClicked(Point h, Rectangle s				){}
 		public void redraw 		(Graphics g, Rectangle here,

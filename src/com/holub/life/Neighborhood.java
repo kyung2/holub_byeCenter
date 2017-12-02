@@ -55,7 +55,7 @@ public final class Neighborhood implements Cell
 	/** The neighborhood is square, so gridSize is both the horizontal
 	 *  and vertical size.
 	 */
-	private final int 	   gridSize;
+	private int 	   gridSize;
 
 	/** Create a new Neigborhood containing gridSize-by-gridSize
 	 *  clones of the prototype. The Protype is deliberately
@@ -70,6 +70,11 @@ public final class Neighborhood implements Cell
 		for( int row = 0; row < gridSize; ++row )
 			for( int column = 0; column < gridSize; ++column )
 				grid[row][column] = prototype.create();
+	}
+
+	public void changeCanvas(int gridSize){
+		this.gridSize = gridSize;
+
 	}
 
 	/** The "clone" method used to create copies of the current

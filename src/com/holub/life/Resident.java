@@ -86,6 +86,11 @@ public final class Resident implements Cell
 		return changed;
 	}
 
+	@Override
+	public void changeCanvas(int gridSize) {
+
+	}
+
 	public void redraw(Graphics g, Rectangle here, boolean drawAll)
     {   g = g.create();
 		g.setColor(amAlive ? LIVE_COLOR : DEAD_COLOR );

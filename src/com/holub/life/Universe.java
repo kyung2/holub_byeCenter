@@ -65,7 +65,10 @@ public class Universe extends JPanel
 	 *  This size is extrinsic to a Resident (It's passed into the
 	 *  Resident's "draw yourself" method.
 	 */
-	private static final int  DEFAULT_CELL_SIZE = 8;
+//	private static final int  DEFAULT_CELL_SIZE = 8;
+//	private static final int  DEFAULT_GRID_SIZE = 4;
+
+	DefaultSize ds = DefaultSize.getInstance(8,8);
 
 	// The constructor is private so that the universe can be created
 	// only by an outer-class method [Neighborhood.createUniverse()].
@@ -94,7 +97,7 @@ public class Universe extends JPanel
 						);
 
 		*/
-
+/*
 			outermostCell = new Neighborhood
             (	DEFAULT_GRID_SIZE,
                     new Neighborhood
@@ -120,7 +123,32 @@ public class Universe extends JPanel
 						(  outermostCell.widthInCells() * DEFAULT_CELL_SIZE,
 						   outermostCell.widthInCells() * DEFAULT_CELL_SIZE
 						);
+*/
 
+		outermostCell = new Neighborhood
+				(	ds.getGridSize(),
+										new Neighborhood
+												(	ds.getGridSize(),
+														new Resident()
+												)
+
+				);
+
+		//        outermostCell = new Neighborhood
+//						(
+//								DEFAULT_GRID_SIZE,
+//								new Resident()
+//
+//						);
+
+		final Dimension PREFERRED_SIZE =
+				//** sangwon 이거 tktlf  이거 사실//현경 경 경
+
+
+				new Dimension
+						(  outermostCell.widthInCells() * ds.getCellSize(),
+								outermostCell.widthInCells() * ds.getCellSize()
+						);
 		addComponentListener
 		(	new ComponentAdapter()
 			{	public void componentResized(ComponentEvent e)
@@ -192,6 +220,44 @@ public class Universe extends JPanel
 		        }
 			}
 		);
+
+		MenuSite.addLine
+				(	this, "Canvas", "Small",
+						new ActionListener()
+						{	public void actionPerformed(ActionEvent e)
+						{	outermostCell.clear();
+							ds.changeSize(2,8);
+							outermostCell.changeCanvas(2);
+							repaint();
+
+						}
+						}
+				);
+
+		MenuSite.addLine
+				(	this, "Canvas", "Medium",
+						new ActionListener()
+						{	public void actionPerformed(ActionEvent e)
+						{	outermostCell.clear();
+							ds.changeSize(4,8);
+							outermostCell.changeCanvas(4);
+							repaint();
+						}
+						}
+				);
+
+		MenuSite.addLine
+				(	this, "Canvas", "Large",
+						new ActionListener()
+						{	public void actionPerformed(ActionEvent e)
+						{	outermostCell.clear();
+							ds.changeSize(8,8);
+							outermostCell.changeCanvas(8);
+
+							repaint();
+						}
+						}
+				);
 
 		//클록 틱 이벤트 구독
 		Clock.instance().addClockListener //{=Universe.clock.subscribe}
