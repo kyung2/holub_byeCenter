@@ -99,6 +99,7 @@ public class Clock
 
 	/** Stop the clock
 	 */
+	/*머지 이 거지같은 상황은???*/
 
 	public void stop()
 	{
@@ -106,9 +107,8 @@ public class Clock
 	}
 
 	/** Create the menu that controls the clock speed and
-	 *  put it onto the menu site. 
+	 *  put it onto the menu sited.
 	 */
-
 	/**저기 주석은...왜..안나오지
 	 * hyunkyung 주석 아래 method의 역할은 이제 게임의 속도 조절하는 역할! */
 
