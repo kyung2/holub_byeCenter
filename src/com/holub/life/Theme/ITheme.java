@@ -30,24 +30,30 @@ import com.holub.life.Storable;
  *                   Universe :		setBackground methond 역시 	( Color.white	 );
  *                   Resident : Cell의 color 를 조정하는 부분 -. pirvate static final color로 선언되어 있음 .
  *                   */
-// hyunkyung
 /**브릿지패턴 이용 ! */
 
+//각 색깔이 쓰이는 곳을 theme로 지정하여 바꿀수 있다. red theme
+
 public interface ITheme {
-    //graphic의 coloir을
- //   public Color setLive_Color (Color c);
-   // public Color setDead_Color (Color c);
-   // public Color setBorder_Color (Color c);
+
+    //cell
+    public Color getLive_Color ();
+    public Color getDead_Color ();
+    public Color getBorder_Color ();
+
+    //Neighborhood 색깔 지정
+    public Color getRedraw_Graphic();
+
+    //universe
+    public Color getBackGround_Color ();
+
 
 //        private static final Color BORDER_COLOR = Colors.DARK_YELLOW;
     //private static final Color BORDER_COLOR = Colors.BLAZINGORANGE;
     //     private static final Color LIVE_COLOR 	= Color.RED;
     //   private static final Color DEAD_COLOR   = Colors.LIGHT_ORANGE;
 
-    public void hello();
 
 
-
-    //각 색깔이 쓰이는 곳을 theme로 지정하여 바꿀수 있다. red theme
 
 }
