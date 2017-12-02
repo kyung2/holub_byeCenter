@@ -37,12 +37,13 @@ import com.holub.life.Storable;
 public interface ITheme {
 
     //cell
-    public Color getLive_Color ();
-    public Color getDead_Color ();
-    public Color getBorder_Color ();
+    public Color getLive_Color (); //세포색깔
+    public Color getDead_Color (); //죽은 세포색깔
+    public Color getBorder_Color (); //게임판색깔
 
-    //Neighborhood 색깔 지정
+    //Neighborhood 색깔 지정 //-> cell의 영역표시하는 줄 색깔 지저
     public Color getRedraw_Graphic();
+    public Color getRedraw_Selection_Graphic();
 
     //universe
     public Color getBackGround_Color ();
