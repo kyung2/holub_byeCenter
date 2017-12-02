@@ -54,6 +54,9 @@ public class Universe extends JPanel
 	 * hyunkyung 3차원 배열을한다는게 몬대?
      *
 	 * */
+	/**
+	Universe는 스윙의 이벤트 모델과 life클래스 사이에 있는 mediator
+	 */
 
 	//현경 : 팩토리..? 아니면 우선 grid size 을 팩토리로 따로 빼면..
 	private static final int  DEFAULT_GRID_SIZE = 4;
@@ -102,7 +105,6 @@ public class Universe extends JPanel
                                             )
                             )
             );
-
 		//        outermostCell = new Neighborhood
 //						(
 //								DEFAULT_GRID_SIZE,
@@ -191,6 +193,7 @@ public class Universe extends JPanel
 			}
 		);
 
+		//클록 틱 이벤트 구독
 		Clock.instance().addClockListener //{=Universe.clock.subscribe}
 		(	new Clock.Listener()
 			{	public void tick()
