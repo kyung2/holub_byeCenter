@@ -42,7 +42,7 @@ public final class Life extends JFrame {
 
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-		getContentPane().setLayout(new BorderLayout());
+		getContentPane().setLayout(new  BorderLayout());
 		getContentPane().add(Universe.instance(), BorderLayout.CENTER); //{=life.java.install}
 		setPreferredSize(new Dimension(900, 800));
 
