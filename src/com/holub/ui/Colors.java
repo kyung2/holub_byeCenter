@@ -118,6 +118,13 @@ public interface Colors
     static final Color LAVENDER = new Color (230,230,250);
     static final Color POWDERBLUE = new Color(176,224,230);
 
+   //hyunkyung color chart White 계열  
+    static final Color WHITE = new Color (255,255,255);
+    static final Color MISTYROSE = new Color (255,228,225);
+    static final Color NAVAJOWHITE = new Color (255,222,173);
+    static final Color LINEN = new Color (250,240,230);
+
+
     //hyunkyung for cell color
 
 

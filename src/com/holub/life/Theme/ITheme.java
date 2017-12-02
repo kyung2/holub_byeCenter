@@ -39,6 +39,7 @@ public interface ITheme {
     //cell
     public Color getLive_Color (); //세포색깔
     public Color getDead_Color (); //죽은 세포색깔
+    //cell 영역안에 있는 줄 색깔 !!!
     public Color getBorder_Color (); //게임판색깔
 
     //Neighborhood 색깔 지정 //-> cell의 영역표시하는 줄 색깔 지저

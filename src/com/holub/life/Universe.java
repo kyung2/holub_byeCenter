@@ -8,6 +8,7 @@ import java.awt.event.*;
 
 import com.holub.io.Files;
 import com.holub.ui.MenuSite;
+import com.holub.ui.Colors;
 
 import com.holub.life.Cell;
 import com.holub.life.Storable;
@@ -167,7 +168,7 @@ public class Universe extends JPanel
 			}
 		);
 
-		setBackground	( Color.white	 );
+		setBackground	( Colors.MAROON	 );
 		setPreferredSize( PREFERRED_SIZE );
 		setMaximumSize	( PREFERRED_SIZE );
 		setMinimumSize	( PREFERRED_SIZE );
