@@ -7,13 +7,10 @@ public class Fast implements Speed {
         return "fast";
     }
     @Override
-    public double getPeriod() {
+    public int getPeriod() {
         return 30;
     }
 
-    @Override
-    public void setPeriod(){
 
-    }
 
 }

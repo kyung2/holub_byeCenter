@@ -7,12 +7,8 @@ public class Medium implements Speed{
     }
 
     @Override
-    public double getPeriod() {
+    public int getPeriod() {
         return 70;
     }
 
-    @Override
-    public void setPeriod() {
-
-    }
 }
