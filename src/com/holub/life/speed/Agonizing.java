@@ -1,14 +1,16 @@
-package com.holub.life;
+package com.holub.life.speed;
 
-public class Slow implements Speed {
+import com.holub.life.speed.Speed;
+
+public class Agonizing implements Speed {
     @Override
     public String getName() {
-        return "slow";
+        return "agonizing";
     }
 
     @Override
     public double getPeriod() {
-        return 150;
+        return 500;
     }
 
     @Override

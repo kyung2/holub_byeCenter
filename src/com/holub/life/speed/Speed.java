@@ -1,4 +1,4 @@
-package com.holub.life;
+package com.holub.life.speed;
 
 public interface Speed {
     String getName();
