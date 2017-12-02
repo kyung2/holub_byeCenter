@@ -32,5 +32,7 @@ import com.holub.life.Storable;
  *                   Resident : Cell의 color 를 조정하는 부분 -. pirvate static final color로 선언되어 있음 .
  *                   */
 // hyunkyung
+    /**브릿지패턴 이용 ! */
+    
 public class Theme {
 }
