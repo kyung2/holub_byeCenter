@@ -270,10 +270,7 @@ public class Universe extends JPanel
 				);
 
 
-		ThemeAdder themeAdder = new ThemeAdder();
-		themeAdder.addTheme(new Blue());
-		themeAdder.addTheme(new Green());
-		themeAdder.addTheme(new Red());
+
 
 		//클록 틱 이벤트 구독
 		Clock.instance().addClockListener //{=Universe.clock.subscribe}

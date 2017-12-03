@@ -17,7 +17,14 @@ public class MyColor {
     private MyColor() {
 
     }
-    public void addMenus() {}
+    public static void addMenus() {
+
+        ThemeAdder themeAdder = new ThemeAdder();
+        themeAdder.addTheme(new Blue());
+        themeAdder.addTheme(new Green());
+        themeAdder.addTheme(new Red());
+    }
+
 
     public void setTheme(ITheme t) {}
 
