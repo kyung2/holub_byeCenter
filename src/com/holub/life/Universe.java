@@ -168,7 +168,7 @@ public class Universe extends JPanel
 			}
 		);
 
-		setBackground	( Colors.MAROON	 );
+		setBackground	( Colors.WHITE	 );
 		setPreferredSize( PREFERRED_SIZE );
 		setMaximumSize	( PREFERRED_SIZE );
 		setMinimumSize	( PREFERRED_SIZE );
