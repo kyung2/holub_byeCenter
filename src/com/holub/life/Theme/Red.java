@@ -7,6 +7,10 @@ import java.awt.*;
 public class Red implements ITheme {
     //cell
     Color c;
+    public String getName() {
+
+        return "Red";
+    }
     public Color getLive_Color () {
 
         return Colors.MAROON;

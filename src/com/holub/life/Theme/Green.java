@@ -8,6 +8,10 @@ public class Green implements ITheme {
 
     //cell
     Color c;
+    public String getName() {
+
+        return "Green";
+    }
 
     public Color getLive_Color() {
         c= new Color(255,168,190);

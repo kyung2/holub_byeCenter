@@ -35,6 +35,7 @@ import com.holub.life.Storable;
 //각 색깔이 쓰이는 곳을 theme로 지정하여 바꿀수 있다. red theme
 
 public interface ITheme {
+    String getName();
 
     //cell
     public Color getLive_Color (); //세포색깔
