@@ -8,6 +8,7 @@ import javax.swing.*;
 
 import com.holub.io.Files;
 import com.holub.life.Cell;
+import com.holub.life.Theme.ITheme;
 import com.holub.life.Theme.MyColor;
 import com.holub.ui.MenuSite;
 import com.holub.ui.Colors;
@@ -43,6 +44,9 @@ public final class Neighborhood implements Cell
 	 */
 	private static final ConditionVariable readingPermitted =
 											new ConditionVariable(true);
+
+	//hyunkyung 현경 : ITheme 적용 하기 위해서
+	private ITheme theme;
 
 	/** Returns true only if none of the cells in the Neighborhood
 	 *  changed state during the last transition.
@@ -380,6 +384,7 @@ public final class Neighborhood implements Cell
 				subcell.translate(-compoundWidth, subcell.height);
 			}
 
+			//hyunkyung 현경 : 브릿지패턴적용
 			g = g.create();
 			g.setColor( Colors.DARK_RED );
 			//내가 해야하는 것

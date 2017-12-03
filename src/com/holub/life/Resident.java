@@ -2,6 +2,9 @@ package com.holub.life;
 
 import java.awt.*;
 import javax.swing.*;
+
+import com.holub.life.Theme.ITheme;
+import com.holub.life.Theme.MyColor;
 import com.holub.ui.Colors;	// Contains constants specifying various
 							// colors not defined in java.awt.Color.
 import com.holub.life.Cell;
@@ -19,7 +22,15 @@ import com.holub.life.Universe;
 public final class Resident implements Cell
 {
 
-	//hyunkyung 색깔을 지정하는것을 팩토리패턴을 만들면될듯... 그러면 다이얼로그창?하나 더 만들면 될듯...
+	//hyunkyung 색깔을 지정하는것을 팩토리패턴아니면 브릿지패턴 을 만들면될듯... 그러면 다이얼로그창?하나 더 만들면 될듯...
+	//hyunkyung 현경 : ITheme 적용 하기 위해서
+	private ITheme theme;
+
+
+	//	g.setColor(MyColor.getInstance().getT().getRedraw_Graphic());
+
+
+//	private static  Color DEAD_COLOR = MyColor.getInstance().getT().getDead_Color();
 
 	private static final Color BORDER_COLOR = Colors.LIGHT_PURPLE;
 	private static final Color DEAD_COLOR = Colors.LIGHT_ORANGE;
@@ -93,14 +104,19 @@ public final class Resident implements Cell
 
 	public void redraw(Graphics g, Rectangle here, boolean drawAll)
     {   g = g.create();
-		g.setColor(amAlive ? LIVE_COLOR : DEAD_COLOR );
+		g.setColor(amAlive ?  LIVE_COLOR : DEAD_COLOR);
+//hyunkyung 현경 추후 적용
+		//g.setColor(amAlive ?  MyColor.getInstance().getT().getLive_Color() :  MyColor.getInstance().getT().getDead_Color() );
 		g.fillRect(here.x+1, here.y+1, here.width-1, here.height-1);
 
 		// Doesn't draw a line on the far right and bottom of the
 		// grid, but that's life, so to speak. It's not worth the
 		// code for the special case.
 
-		g.setColor( BORDER_COLOR );
+
+		g.setColor(  BORDER_COLOR);
+//혁녕 추후 적용
+		//g.setColor(  MyColor.getInstance().getT().getBorder_Color() );
 		g.drawLine( here.x, here.y, here.x, here.y + here.height );
 		g.drawLine( here.x, here.y, here.x + here.width, here.y  );
 		g.dispose();

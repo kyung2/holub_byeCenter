@@ -7,6 +7,7 @@ import javax.swing.*;
 import java.awt.event.*;
 
 import com.holub.io.Files;
+import com.holub.life.Theme.MyColor;
 import com.holub.ui.MenuSite;
 import com.holub.ui.Colors;
 
@@ -169,6 +170,9 @@ public class Universe extends JPanel
 		);
 
 		setBackground	( Colors.WHITE	 );
+		//추후
+		//	setBackground	( MyColor.getInstance().getT().getBackGround_Color());
+
 		setPreferredSize( PREFERRED_SIZE );
 		setMaximumSize	( PREFERRED_SIZE );
 		setMinimumSize	( PREFERRED_SIZE );
