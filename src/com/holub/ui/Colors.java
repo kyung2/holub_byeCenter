@@ -92,7 +92,7 @@ public interface Colors
     static final Color ROSE_QUARTZ = new Color (247,202,201); //f7cac9
     static final Color SERENITY = new Color(154,168,209); // 92a8d1
 
-    //hyunkyung pantone color chart Yellow
+    //hyunkyung pantone color chart
     static final Color SUNSHINE = new Color(250,222,133); //fade85
     static final Color CITRUS = new Color (255,176,37); //FFB025
     static final Color LEMONCHROME = new Color (255,198,0); //ffc600

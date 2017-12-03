@@ -9,6 +9,7 @@ import java.awt.event.*;
 import com.holub.io.Files;
 import com.holub.life.Theme.MyColor;
 import com.holub.life.mouse.MouseCommandManager;
+import com.holub.life.Theme.*;
 import com.holub.ui.MenuSite;
 import com.holub.ui.Colors;
 
@@ -172,7 +173,7 @@ public class Universe extends JPanel
 
 		setBackground	( Colors.WHITE	 );
 		//추후
-		//	setBackground	( MyColor.getInstance().getT().getBackGround_Color());
+//			setBackground	( MyColor.getInstance().getT().getBackGround_Color());
 
 		setPreferredSize( PREFERRED_SIZE );
 		setMaximumSize	( PREFERRED_SIZE );
@@ -267,6 +268,12 @@ public class Universe extends JPanel
 						}
 						}
 				);
+
+
+		ThemeAdder themeAdder = new ThemeAdder();
+		themeAdder.addTheme(new Blue());
+		themeAdder.addTheme(new Green());
+		themeAdder.addTheme(new Red());
 
 		//클록 틱 이벤트 구독
 		Clock.instance().addClockListener //{=Universe.clock.subscribe}

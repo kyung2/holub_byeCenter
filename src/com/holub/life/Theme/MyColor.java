@@ -1,6 +1,12 @@
 package com.holub.life.Theme;
 
+import java.awt.*;
+import com.holub.ui.*;
 public class MyColor {
+
+    //default조정
+
+
     private static MyColor ourInstance = new MyColor();
 
     public static MyColor getInstance() {
