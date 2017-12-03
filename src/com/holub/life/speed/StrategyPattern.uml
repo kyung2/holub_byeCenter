@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="50.5" y="-65.0">com.holub.life.speed.Speed</node>
+    <node x="-11.0" y="42.0">com.holub.life.speed.Fast</node>
+    <node x="445.0" y="42.0">com.holub.life.speed.SpeedAdder</node>
+    <node x="-142.0" y="42.0">com.holub.life.speed.Slow</node>
+    <node x="114.0" y="42.0">com.holub.life.speed.Medium</node>
+    <node x="275.0" y="42.0">com.holub.life.speed.EzraMiller</node>
+    <node x="-316.0" y="42.0">com.holub.life.speed.Agonizing</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.holub.life.speed.Agonizing" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="-239.0" y="2.0" />
+      <point x="60.91666666666663" y="2.0" />
+      <point x="-52.083333333333314" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.Medium" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="184.5" y="22.0" />
+      <point x="123.41666666666663" y="22.0" />
+      <point x="10.416666666666686" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.Fast" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="41.5" y="22.0" />
+      <point x="102.58333333333326" y="22.0" />
+      <point x="-10.416666666666686" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.SpeedAdder" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="532.5" y="2.0" />
+      <point x="165.08333333333326" y="2.0" />
+      <point x="52.083333333333314" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.EzraMiller" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="350.0" y="12.0" />
+      <point x="144.25" y="12.0" />
+      <point x="31.25" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.Slow" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="-86.5" y="12.0" />
+      <point x="81.75" y="12.0" />
+      <point x="-31.25" y="23.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="285.0" y="40.0" />
+  <SelectedNodes>
+    <node>com.holub.life.speed.Speed</node>
+    <node>com.holub.life.speed.Fast</node>
+    <node>com.holub.life.speed.SpeedAdder</node>
+    <node>com.holub.life.speed.Slow</node>
+    <node>com.holub.life.speed.Medium</node>
+    <node>com.holub.life.speed.EzraMiller</node>
+    <node>com.holub.life.speed.Agonizing</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

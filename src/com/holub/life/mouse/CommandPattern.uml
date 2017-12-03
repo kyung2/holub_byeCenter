@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="235.00000000000006" y="97.0">com.holub.life.mouse.AlwaysDieCommand</node>
+    <node x="0.0" y="97.0">com.holub.life.mouse.DefaultCommand</node>
+    <node x="494.00000000000006" y="97.0">com.holub.life.mouse.AlwaysAliveCommand</node>
+    <node x="460.6571428571429" y="194.0">com.holub.life.mouse.MouseCommandManager</node>
+    <node x="511.05714285714294" y="0.0">com.holub.life.mouse.MouseCommand</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.holub.life.mouse.DefaultCommand" target="com.holub.life.mouse.MouseCommand">
+      <point x="0.0" y="-23.5" />
+      <point x="107.5" y="67.0" />
+      <point x="532.3571428571429" y="67.0" />
+      <point x="-85.19999999999999" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.mouse.AlwaysDieCommand" target="com.holub.life.mouse.MouseCommand">
+      <point x="0.0" y="-23.5" />
+      <point x="354.50000000000006" y="77.0" />
+      <point x="574.9571428571429" y="77.0" />
+      <point x="-42.60000000000002" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.mouse.MouseCommandManager" target="com.holub.life.mouse.AlwaysAliveCommand">
+      <point x="0.0" y="-23.5" />
+      <point x="603.1571428571428" y="174.0" />
+      <point x="619.5" y="174.0" />
+      <point x="0.0" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.mouse.MouseCommandManager" target="com.holub.life.mouse.AlwaysDieCommand">
+      <point x="-57.0" y="-23.5" />
+      <point x="546.1571428571428" y="164.0" />
+      <point x="354.50000000000006" y="164.0" />
+      <point x="0.0" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.mouse.MouseCommandManager" target="com.holub.life.mouse.DefaultCommand">
+      <point x="-114.0" y="-23.5" />
+      <point x="489.1571428571429" y="174.0" />
+      <point x="107.5" y="174.0" />
+      <point x="0.0" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.mouse.AlwaysAliveCommand" target="com.holub.life.mouse.MouseCommand">
+      <point x="0.0" y="-23.5" />
+      <point x="619.5" y="77.0" />
+      <point x="617.5571428571429" y="77.0" />
+      <point x="0.0" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.mouse.MouseCommandManager" target="com.holub.life.mouse.MouseCommand">
+      <point x="114.00000000000001" y="-23.5" />
+      <point x="717.1571428571428" y="174.0" />
+      <point x="766.5" y="174.0" />
+      <point x="766.5" y="67.0" />
+      <point x="702.7571428571429" y="67.0" />
+      <point x="85.19999999999995" y="23.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="240.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
