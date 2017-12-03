@@ -171,9 +171,9 @@ public class Universe extends JPanel
 			}
 		);
 
-		setBackground	( Colors.WHITE	 );
+//		setBackground	( Colors.WHITE	 );
 		//추후
-//			setBackground	( MyColor.getInstance().getT().getBackGround_Color());
+			setBackground	( MyColor.getInstance().getT().getBackGround_Color());
 
 		setPreferredSize( PREFERRED_SIZE );
 		setMaximumSize	( PREFERRED_SIZE );

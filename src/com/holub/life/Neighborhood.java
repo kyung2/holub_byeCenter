@@ -386,15 +386,15 @@ public final class Neighborhood implements Cell
 
 			//hyunkyung 현경 : 브릿지패턴적용
 			g = g.create();
-			g.setColor( Colors.DARK_RED );
+			//g.setColor( Colors.DARK_RED );
 			//내가 해야하는 것
-		//	g.setColor(MyColor.getInstance().getT().getRedraw_Graphic());
+			g.setColor(MyColor.getInstance().getT().getRedraw_Graphic());
 			g.drawRect( here.x, here.y, here.width, here.height );
 
 			if( amActive )
 			{
-				g.setColor( Colors.MEDIUM_BLUE);
-//				g.setColor( MyColor.getInstance().getT().getRedraw_Selection_Graphic());
+			//	g.setColor( Colors.MEDIUM_BLUE);
+				g.setColor( MyColor.getInstance().getT().getRedraw_Selection_Graphic());
 
 				g.drawRect(	here.x+1,	  here.y+1,
 							here.width-2, here.height-2 );

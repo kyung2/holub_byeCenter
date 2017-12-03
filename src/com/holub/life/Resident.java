@@ -32,10 +32,11 @@ public final class Resident implements Cell
 
 //	private static  Color DEAD_COLOR = MyColor.getInstance().getT().getDead_Color();
 
+	/*
 	private static final Color BORDER_COLOR = Colors.LIGHT_PURPLE;
 	private static final Color DEAD_COLOR = Colors.LIGHT_ORANGE;
 	private static final Color LIVE_COLOR 	= Color.RED;
-
+*/
 
 	private boolean amAlive 	= false;
 	private boolean willBeAlive	= false;
@@ -104,9 +105,9 @@ public final class Resident implements Cell
 
 	public void redraw(Graphics g, Rectangle here, boolean drawAll)
     {   g = g.create();
-		g.setColor(amAlive ?  LIVE_COLOR : DEAD_COLOR);
+		//g.setColor(amAlive ?  LIVE_COLOR : DEAD_COLOR);
 //hyunkyung 현경 추후 적용
-		//g.setColor(amAlive ?  MyColor.getInstance().getT().getLive_Color() :  MyColor.getInstance().getT().getDead_Color() );
+		g.setColor(amAlive ?  MyColor.getInstance().getT().getLive_Color() :  MyColor.getInstance().getT().getDead_Color() );
 		g.fillRect(here.x+1, here.y+1, here.width-1, here.height-1);
 
 		// Doesn't draw a line on the far right and bottom of the
@@ -114,9 +115,9 @@ public final class Resident implements Cell
 		// code for the special case.
 
 
-		g.setColor(  BORDER_COLOR);
+		//g.setColor(  BORDER_COLOR);
 //혁녕 추후 적용
-		//g.setColor(  MyColor.getInstance().getT().getBorder_Color() );
+		g.setColor(  MyColor.getInstance().getT().getBorder_Color() );
 		g.drawLine( here.x, here.y, here.x, here.y + here.height );
 		g.drawLine( here.x, here.y, here.x + here.width, here.y  );
 		g.dispose();
