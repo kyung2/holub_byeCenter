@@ -123,10 +123,16 @@ public final class Resident implements Cell
 	}
 
 	public void userClicked(Point here, Rectangle surface)
-	{	amAlive = !amAlive;
+	{
+		amAlive = !amAlive;
 	}
 
-	public void	   clear()			{amAlive = willBeAlive = false; }
+    @Override
+    public void userSet(Point here, Rectangle surface, Boolean setTo) {
+	    amAlive = setTo;
+    }
+
+    public void	   clear()			{amAlive = willBeAlive = false; }
 	public boolean isAlive()		{return amAlive;			    }
 	public Cell    create()			{return new Resident();			}
 	public int 	   widthInCells()	{return 1;}

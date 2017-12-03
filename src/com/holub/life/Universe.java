@@ -8,6 +8,7 @@ import java.awt.event.*;
 
 import com.holub.io.Files;
 import com.holub.life.Theme.MyColor;
+import com.holub.life.mouse.MouseCommandManager;
 import com.holub.ui.MenuSite;
 import com.holub.ui.Colors;
 
@@ -181,11 +182,14 @@ public class Universe extends JPanel
 		addMouseListener					//{=Universe.mouse}
 		(	new MouseAdapter()
 			{	public void mousePressed(MouseEvent e)
-				{	Rectangle bounds = getBounds();
-					bounds.x = 0;
-					bounds.y = 0;
-					outermostCell.userClicked(e.getPoint(),bounds);
-					repaint();
+				{
+					//이게 커맨드패턴 써서 한거임
+					MouseCommandManager.getInstance().executeMouseEvent(e,outermostCell);
+//					Rectangle bounds = getBounds();
+//					bounds.x = 0;
+//					bounds.y = 0;
+//					outermostCell.userClicked(e.getPoint(),bounds);
+//					repaint();
 				}
 			}
 		);
