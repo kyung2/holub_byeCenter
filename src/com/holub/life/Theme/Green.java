@@ -1,5 +1,7 @@
 package com.holub.life.Theme;
 
+import com.holub.ui.Colors;
+
 import java.awt.*;
 
 public class Green implements ITheme {
@@ -32,9 +34,9 @@ public class Green implements ITheme {
         return c;
     }
 
-    //universe
-    public Color getBackGround_Color() {
+    //universe //backgroud 는 어차피 덮히니까..
+    public Color getBackGround_Color (){
+        return Colors.ALICEBLUE;
+    };
 
-        return c;
-    }
 }
