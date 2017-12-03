@@ -9,12 +9,13 @@ public class Blue implements ITheme {
   Color c;
 
     public Color getLive_Color () {
-        c = new Color(79,133,255);
+        c = new Color(255,202,79);
+
+//        c = new Color(79,133,255);
         return c;
     }
     public Color getDead_Color  ()  {
-        c = new Color(255,202,79);
-        return c;
+        return Colors.ISLAND_PARADISE;
     }
     public Color getBorder_Color () {
         c = new Color (255,255,255);
@@ -23,7 +24,7 @@ public class Blue implements ITheme {
     //Neighborhood 색깔 지정
     public Color getRedraw_Graphic() {
 
-        return Colors.LAPIS_BLUE;
+        return Colors.DARK_BLUE;
     }
     public Color getRedraw_Selection_Graphic() {
 

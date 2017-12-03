@@ -1,4 +1,3 @@
-/*
 package com.holub.life.Theme;
 
 public class MyColor {
@@ -21,4 +20,4 @@ public class MyColor {
     }
 }
 
-*/
+

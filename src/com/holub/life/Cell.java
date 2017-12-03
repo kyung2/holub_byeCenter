@@ -1,5 +1,9 @@
 package com.holub.life;
+
+import com.holub.life.Theme.*;
+import com.holub.ui.MenuSite;
 import java.awt.*;
+
 
 import com.holub.life.Storable;
 

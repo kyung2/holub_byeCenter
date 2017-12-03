@@ -8,7 +8,7 @@ import javax.swing.*;
 
 import com.holub.io.Files;
 import com.holub.life.Cell;
-//import com.holub.life.Theme.MyColor;
+import com.holub.life.Theme.MyColor;
 import com.holub.ui.MenuSite;
 import com.holub.ui.Colors;
 import com.holub.asynch.ConditionVariable;

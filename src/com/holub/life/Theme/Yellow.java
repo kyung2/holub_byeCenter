@@ -32,5 +32,4 @@ public class Yellow implements ITheme {
     public Color getBackGround_Color (){
         return Colors.ALICEBLUE;
     };
-
 }

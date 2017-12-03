@@ -10,26 +10,30 @@ public class Green implements ITheme {
     Color c;
 
     public Color getLive_Color() {
+        c= new Color(255,168,190);
+
         return c;
     }
 
     public Color getDead_Color() {
 
-        return c;
+        return Colors.GREENERY;
     }
 
     public Color getBorder_Color() {
 
-        return c;
+
+        return Colors.BLAZINGORANGE;
     }
 
     //Neighborhood 색깔 지정
     public Color getRedraw_Graphic() {
 
-        return c;
+        return Colors.GREENERY;
     }
 
     public Color getRedraw_Selection_Graphic() {
+        c= new Color(178,57,88);
 
         return c;
     }
