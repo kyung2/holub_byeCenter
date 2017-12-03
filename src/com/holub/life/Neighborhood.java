@@ -440,7 +440,7 @@ public final class Neighborhood implements Cell
 	}
 
 	@Override
-	public void userSet(Point here, Rectangle surface, Boolean setTo) {
+	public boolean userSet(Point here, Rectangle surface, Boolean setTo) {
 		int pixelsPerCell = surface.width / gridSize ;
 		int row				= here.y     	/ pixelsPerCell ;
 		int column			= here.x     	/ pixelsPerCell ;
@@ -451,9 +451,10 @@ public final class Neighborhood implements Cell
 		Rectangle subcell = new Rectangle(	0, 0, pixelsPerCell,
 				pixelsPerCell );
 
-		grid[row][column].userSet(position, subcell,setTo); //{=Neighborhood.userClicked.call}
-		amActive = true;
+		boolean changed = grid[row][column].userSet(position, subcell,setTo); //{=Neighborhood.userClicked.call}
+		if(amActive|| changed)amActive=true;
 		rememberThatCellAtEdgeChangedState(row, column);
+		return amActive||changed;
 	}
 
 	//neighborhood cell

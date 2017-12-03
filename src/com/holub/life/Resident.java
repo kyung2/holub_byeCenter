@@ -128,8 +128,10 @@ public final class Resident implements Cell
 	}
 
     @Override
-    public void userSet(Point here, Rectangle surface, Boolean setTo) {
+    public boolean userSet(Point here, Rectangle surface, Boolean setTo) {
+	    boolean temp = amAlive;
 	    amAlive = setTo;
+	    return temp!=amAlive;
     }
 
     public void	   clear()			{amAlive = willBeAlive = false; }
