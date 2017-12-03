@@ -79,6 +79,8 @@ public interface Cell
 	 * user클릭 Point랑 Rectangle이 있음.. 이걸로 보고 */
 	void userClicked(Point here, Rectangle surface);
 
+	public void userSet(Point here, Rectangle surface,Boolean setTo);
+
 	/** Return true if this cell or any subcells are alive.
 	 */
 	/**살아있냐 안살아있냐 판단하는 TF Boolean 타입으로 판단*/
@@ -172,6 +174,11 @@ public interface Cell
 		public int 		 widthInCells()  	{return 0;				  }
 		public boolean	 transition()		{return false;			  }
 		public void 	 changeCanvas(int gridSize)	{			      }
+
+		@Override
+		public void userSet(Point here, Rectangle surface, Boolean setTo) {
+
+		}
 
 		public void	userClicked(Point h, Rectangle s				){}
 		public void redraw 		(Graphics g, Rectangle here,

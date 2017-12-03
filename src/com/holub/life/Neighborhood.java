@@ -438,7 +438,25 @@ public final class Neighborhood implements Cell
 		amActive = true;
 		rememberThatCellAtEdgeChangedState(row, column);
 	}
-//neighborhood cell
+
+	@Override
+	public void userSet(Point here, Rectangle surface, Boolean setTo) {
+		int pixelsPerCell = surface.width / gridSize ;
+		int row				= here.y     	/ pixelsPerCell ;
+		int column			= here.x     	/ pixelsPerCell ;
+		int rowOffset		= here.y     	% pixelsPerCell ;
+		int columnOffset	= here.x     	% pixelsPerCell ;
+
+		Point position = new Point( columnOffset, rowOffset );
+		Rectangle subcell = new Rectangle(	0, 0, pixelsPerCell,
+				pixelsPerCell );
+
+		grid[row][column].userSet(position, subcell,setTo); //{=Neighborhood.userClicked.call}
+		amActive = true;
+		rememberThatCellAtEdgeChangedState(row, column);
+	}
+
+	//neighborhood cell
 	public boolean isAlive()
 	{
 		return true;

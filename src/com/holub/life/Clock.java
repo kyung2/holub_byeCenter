@@ -149,6 +149,7 @@ public class Clock
         speedAdder.addSpeed(new Slow());
         speedAdder.addSpeed(new Medium());
         speedAdder.addSpeed(new Fast());
+        speedAdder.addSpeed(new EzraMiller());
 // {=endSetup}
 }	//{=endCreateMenus}
 
