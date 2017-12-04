@@ -1,7 +1,5 @@
 package com.holub.life.speed;
 
-import com.holub.life.speed.Speed;
-
 public class Agonizing implements Speed {
     @Override
     public String getName() {
@@ -9,12 +7,9 @@ public class Agonizing implements Speed {
     }
 
     @Override
-    public double getPeriod() {
+    public int getPeriod() {
         return 500;
     }
 
-    @Override
-    public void setPeriod() {
 
-    }
 }

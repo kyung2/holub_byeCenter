@@ -92,7 +92,7 @@ public interface Colors
     static final Color ROSE_QUARTZ = new Color (247,202,201); //f7cac9
     static final Color SERENITY = new Color(154,168,209); // 92a8d1
 
-    //hyunkyung pantone color chart Yellow
+    //hyunkyung pantone color chart
     static final Color SUNSHINE = new Color(250,222,133); //fade85
     static final Color CITRUS = new Color (255,176,37); //FFB025
     static final Color LEMONCHROME = new Color (255,198,0); //ffc600
@@ -117,6 +117,16 @@ public interface Colors
     static final Color ALICEBLUE = new Color(240,248,255); //f0f8ff
     static final Color LAVENDER = new Color (230,230,250);
     static final Color POWDERBLUE = new Color(176,224,230);
+
+   //hyunkyung color chart White 계열
+    static final Color WHITE = new Color (255,255,255);
+    static final Color MISTYROSE = new Color (255,228,225);
+    static final Color NAVAJOWHITE = new Color (255,222,173);
+    static final Color LINEN = new Color (250,240,230);
+   // transparent
+    static final Color TRANSPARENT = new Color (0,0,0,0); //투명한 색상을 나타낸다.
+
+
 
     //hyunkyung for cell color
 

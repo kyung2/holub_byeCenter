@@ -7,12 +7,9 @@ public class Slow implements Speed {
     }
 
     @Override
-    public double getPeriod() {
+    public int getPeriod() {
         return 150;
     }
 
-    @Override
-    public void setPeriod() {
 
-    }
 }

@@ -1,5 +1,9 @@
 package com.holub.life;
+
+import com.holub.life.Theme.*;
+import com.holub.ui.MenuSite;
 import java.awt.*;
+
 
 import com.holub.life.Storable;
 
@@ -74,6 +78,8 @@ public interface Cell
 	/**hyunkyung 주석
 	 * user클릭 Point랑 Rectangle이 있음.. 이걸로 보고 */
 	void userClicked(Point here, Rectangle surface);
+
+	public boolean userSet(Point here, Rectangle surface,Boolean setTo);
 
 	/** Return true if this cell or any subcells are alive.
 	 */
@@ -168,6 +174,11 @@ public interface Cell
 		public int 		 widthInCells()  	{return 0;				  }
 		public boolean	 transition()		{return false;			  }
 		public void 	 changeCanvas(int gridSize)	{			      }
+
+		@Override
+		public boolean userSet(Point here, Rectangle surface, Boolean setTo) {
+			return setTo;
+		}
 
 		public void	userClicked(Point h, Rectangle s				){}
 		public void redraw 		(Graphics g, Rectangle here,

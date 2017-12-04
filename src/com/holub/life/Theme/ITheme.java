@@ -35,25 +35,20 @@ import com.holub.life.Storable;
 //각 색깔이 쓰이는 곳을 theme로 지정하여 바꿀수 있다. red theme
 
 public interface ITheme {
+    String getName();
 
     //cell
-    public Color getLive_Color ();
-    public Color getDead_Color ();
-    public Color getBorder_Color ();
+    public Color getLive_Color (); //세포색깔
+    public Color getDead_Color (); //죽은 세포색깔
+    //cell 영역안에 있는 줄 색깔 !!!
+    public Color getBorder_Color (); //게임판색깔
 
-    //Neighborhood 색깔 지정
+    //Neighborhood 색깔 지정 //-> cell의 영역표시하는 줄 색깔 지저
+    //Border색상과 동일하게
     public Color getRedraw_Graphic();
+    public Color getRedraw_Selection_Graphic();
 
     //universe
     public Color getBackGround_Color ();
-
-
-//        private static final Color BORDER_COLOR = Colors.DARK_YELLOW;
-    //private static final Color BORDER_COLOR = Colors.BLAZINGORANGE;
-    //     private static final Color LIVE_COLOR 	= Color.RED;
-    //   private static final Color DEAD_COLOR   = Colors.LIGHT_ORANGE;
-
-
-
 
 }

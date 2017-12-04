@@ -8,6 +8,8 @@ import javax.swing.*;
 
 import com.holub.io.Files;
 import com.holub.life.Cell;
+import com.holub.life.Theme.ITheme;
+import com.holub.life.Theme.MyColor;
 import com.holub.ui.MenuSite;
 import com.holub.ui.Colors;
 import com.holub.asynch.ConditionVariable;
@@ -42,6 +44,9 @@ public final class Neighborhood implements Cell
 	 */
 	private static final ConditionVariable readingPermitted =
 											new ConditionVariable(true);
+
+	//hyunkyung 현경 : ITheme 적용 하기 위해서
+	private ITheme theme;
 
 	/** Returns true only if none of the cells in the Neighborhood
 	 *  changed state during the last transition.
@@ -379,12 +384,18 @@ public final class Neighborhood implements Cell
 				subcell.translate(-compoundWidth, subcell.height);
 			}
 
+			//hyunkyung 현경 : 브릿지패턴적용
 			g = g.create();
-			g.setColor( Colors.LIGHT_ORANGE );
+			//g.setColor( Colors.DARK_RED );
+			//내가 해야하는 것
+			g.setColor(MyColor.getInstance().getT().getRedraw_Graphic());
 			g.drawRect( here.x, here.y, here.width, here.height );
 
 			if( amActive )
-			{	g.setColor( Color.BLUE );
+			{
+			//	g.setColor( Colors.MEDIUM_BLUE);
+				g.setColor( MyColor.getInstance().getT().getRedraw_Selection_Graphic());
+
 				g.drawRect(	here.x+1,	  here.y+1,
 							here.width-2, here.height-2 );
 			}
@@ -427,7 +438,26 @@ public final class Neighborhood implements Cell
 		amActive = true;
 		rememberThatCellAtEdgeChangedState(row, column);
 	}
-//neighborhood cell
+
+	@Override
+	public boolean userSet(Point here, Rectangle surface, Boolean setTo) {
+		int pixelsPerCell = surface.width / gridSize ;
+		int row				= here.y     	/ pixelsPerCell ;
+		int column			= here.x     	/ pixelsPerCell ;
+		int rowOffset		= here.y     	% pixelsPerCell ;
+		int columnOffset	= here.x     	% pixelsPerCell ;
+
+		Point position = new Point( columnOffset, rowOffset );
+		Rectangle subcell = new Rectangle(	0, 0, pixelsPerCell,
+				pixelsPerCell );
+
+		boolean changed = grid[row][column].userSet(position, subcell,setTo); //{=Neighborhood.userClicked.call}
+		if(amActive|| changed)amActive=true;
+		rememberThatCellAtEdgeChangedState(row, column);
+		return amActive||changed;
+	}
+
+	//neighborhood cell
 	public boolean isAlive()
 	{
 		return true;

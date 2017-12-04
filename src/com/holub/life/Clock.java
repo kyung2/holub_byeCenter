@@ -5,6 +5,8 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 import java.util.Timer;		// overrides java.awt.timer
+
+import com.holub.life.speed.*;
 import com.holub.ui.MenuSite;
 import com.holub.tools.Publisher;
 
@@ -130,10 +132,7 @@ public class Clock
 					if( toDo=='T' )
 						tick();				      // single tick
 					else
-						startTicking(   toDo=='A' ? 500:	  // agonizing
-										toDo=='S' ? 150:	  // slow
-										toDo=='M' ? 70 :	  // medium
-										toDo=='F' ? 30 : 0 ); // fast
+						startTicking(  0 ); // fast
 				}
 			};
 
@@ -141,10 +140,16 @@ public class Clock
 																							// {=midSetup}
 		MenuSite.addLine(this,"Go","Halt",  			modifier);
 		MenuSite.addLine(this,"Go","Tick (Single Step)",modifier);
-		MenuSite.addLine(this,"Go","Agonizing",	 	  	modifier);
-		MenuSite.addLine(this,"Go","Slow",		 		modifier);
-		MenuSite.addLine(this,"Go","Medium",	 	 	modifier);
-		MenuSite.addLine(this,"Go","Fast",				modifier);
+//		MenuSite.addLine(this,"Go","Agonizing",	 	  	modifier);
+//		MenuSite.addLine(this,"Go","Slow",		 		modifier);
+//		MenuSite.addLine(this,"Go","Medium",	 	 	modifier);
+//		MenuSite.addLine(this,"Go","Fast",				modifier);
+        SpeedAdder speedAdder = new SpeedAdder();
+        speedAdder.addSpeed(new Agonizing());
+        speedAdder.addSpeed(new Slow());
+        speedAdder.addSpeed(new Medium());
+        speedAdder.addSpeed(new Fast());
+        speedAdder.addSpeed(new EzraMiller());
 // {=endSetup}
 }	//{=endCreateMenus}
 

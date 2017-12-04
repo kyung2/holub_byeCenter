@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="398.75" y="0.0">com.holub.life.speed.Speed</node>
+    <node x="335.0" y="107.0">com.holub.life.speed.Fast</node>
+    <node x="758.0" y="109.0">com.holub.life.speed.SpeedAdder</node>
+    <node x="630.0" y="107.0">com.holub.life.speed.Slow</node>
+    <node x="174.0" y="107.0">com.holub.life.speed.Medium</node>
+    <node x="460.0" y="107.0">com.holub.life.speed.EzraMiller</node>
+    <node x="0.0" y="107.0">com.holub.life.speed.Agonizing</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.holub.life.speed.Fast" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="387.5" y="87.0" />
+      <point x="450.8333333333333" y="87.0" />
+      <point x="-10.416666666666686" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.EzraMiller" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="535.0" y="87.0" />
+      <point x="471.6666666666667" y="87.0" />
+      <point x="10.416666666666686" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.Slow" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="685.5" y="77.0" />
+      <point x="492.5" y="77.0" />
+      <point x="31.25" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.Agonizing" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="77.0" y="67.0" />
+      <point x="409.1666666666667" y="67.0" />
+      <point x="-52.083333333333314" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.Medium" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="244.5" y="77.0" />
+      <point x="430.0" y="77.0" />
+      <point x="-31.25" y="23.5" />
+    </edge>
+    <edge source="com.holub.life.speed.SpeedAdder" target="com.holub.life.speed.Speed">
+      <point x="0.0" y="-23.5" />
+      <point x="848.5" y="67.0" />
+      <point x="513.3333333333334" y="67.0" />
+      <point x="52.08333333333337" y="23.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="344.5" y="75.5" />
+  <SelectedNodes>
+    <node>com.holub.life.speed.SpeedAdder</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

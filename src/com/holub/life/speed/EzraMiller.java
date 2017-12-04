@@ -1,14 +1,14 @@
 package com.holub.life.speed;
 
-public class Fast implements Speed {
+public class EzraMiller implements Speed {
 
     @Override
     public String getName(){
-        return "fast";
+        return "Ezra Miller";
     }
     @Override
     public int getPeriod() {
-        return 30;
+        return 15;
     }
 
 

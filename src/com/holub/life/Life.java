@@ -2,6 +2,9 @@ package com.holub.life;
 
 import java.awt.*;
 import javax.swing.*;
+
+import com.holub.life.mouse.MouseCommandManager;
+import com.holub.life.Theme.MyColor;
 import com.holub.ui.MenuSite;
 
 /*******************************************************************
@@ -44,6 +47,10 @@ public final class Life extends JFrame {
 
 		getContentPane().setLayout(new  BorderLayout());
 		getContentPane().add(Universe.instance(), BorderLayout.CENTER); //{=life.java.install}
+
+		MyColor.addMenus();
+		MouseCommandManager.addMenus();
+
 		setPreferredSize(new Dimension(900, 800));
 
 
