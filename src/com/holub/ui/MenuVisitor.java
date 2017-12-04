@@ -1,10 +1,8 @@
 package com.holub.ui;
 
 import com.holub.life.Clock;
-import com.holub.life.Theme.Blue;
-import com.holub.life.Theme.DefaultTheme;
-import com.holub.life.Theme.Green;
-import com.holub.life.Theme.Red;
+import com.holub.life.Theme.*;
+import com.holub.life.Universe;
 import com.holub.life.mouse.*;
 import com.holub.life.speed.*;
 
@@ -15,21 +13,52 @@ public class MenuVisitor implements MyVisitor{
 
     @Override
     public void visit(DefaultTheme theme) {
-
+        MenuSite.addLine(this, "Color", theme.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MyColor.getInstance().setTheme(theme);
+                Universe.instance().paint(Universe.instance().getGraphics());
+//                MyColor.getInstance().getT();
+            }
+        });
     }
     @Override
     public void visit(Red theme) {
 
+        MenuSite.addLine(this, "Color", theme.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MyColor.getInstance().setTheme(theme);
+                Universe.instance().paint(Universe.instance().getGraphics());
+//                MyColor.getInstance().getT();
+            }
+        });
     }
 
     @Override
     public void visit(Blue theme) {
 
+        MenuSite.addLine(this, "Color", theme.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MyColor.getInstance().setTheme(theme);
+                Universe.instance().paint(Universe.instance().getGraphics());
+//                MyColor.getInstance().getT();
+            }
+        });
     }
 
     @Override
     public void visit(Green theme) {
 
+        MenuSite.addLine(this, "Color", theme.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MyColor.getInstance().setTheme(theme);
+                Universe.instance().paint(Universe.instance().getGraphics());
+//                MyColor.getInstance().getT();
+            }
+        });
     }
 
     @Override

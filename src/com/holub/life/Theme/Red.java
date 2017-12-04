@@ -1,10 +1,12 @@
 package com.holub.life.Theme;
 
 import com.holub.ui.Colors;
+import com.holub.ui.MyVisitor;
+import com.holub.ui.VisitorElement;
 
 import java.awt.*;
 
-public class Red implements ITheme {
+public class Red implements ITheme ,VisitorElement{
     //cell
     Color c;
     public String getName() {
@@ -39,5 +41,13 @@ public class Red implements ITheme {
     public Color getBackGround_Color (){
         return Colors.ALICEBLUE;
     };
+    @Override
+    public void accept(MyVisitor visitor) {
+        visitor.visit(this);
+    }
 
+    @Override
+    public String getMenuName() {
+        return "Red";
+    }
 }

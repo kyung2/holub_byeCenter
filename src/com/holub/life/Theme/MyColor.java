@@ -2,9 +2,11 @@ package com.holub.life.Theme;
 
 import java.awt.*;
 import java.awt.event.MouseEvent;
+import java.util.ArrayList;
 
 import com.holub.life.Cell;
 import com.holub.life.Universe;
+import com.holub.life.speed.*;
 import com.holub.ui.*;
 public class MyColor {
 
@@ -26,16 +28,8 @@ public class MyColor {
     private ITheme t;
     private MyColor() {
         t =  new DefaultTheme();
-
     }
-    public static void addMenus() {
 
-        ThemeAdder themeAdder = new ThemeAdder();
-        themeAdder.addTheme(new DefaultTheme());
-        themeAdder.addTheme(new Blue());
-        themeAdder.addTheme(new Green());
-        themeAdder.addTheme(new Red());
-    }
 
     //set theme 부분
     public void setTheme(ITheme t) {
@@ -46,6 +40,20 @@ public class MyColor {
 
     public ITheme getT() {
         return t;
+    }
+
+    ArrayList<VisitorElement> getSpeeds(){
+        ArrayList<VisitorElement>elements = new ArrayList<>();
+        elements.add(new DefaultTheme());
+        elements.add(new Blue());
+        elements.add(new Green());
+        elements.add(new Red());
+        return elements;
+    }
+    public void addMenus(MyVisitor visitor){
+        for(VisitorElement element:getSpeeds()){
+            element.accept(visitor);
+        }
     }
 }
 

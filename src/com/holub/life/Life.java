@@ -51,11 +51,11 @@ public final class Life extends JFrame {
 		getContentPane().setLayout(new  BorderLayout());
 		getContentPane().add(Universe.instance(), BorderLayout.CENTER); //{=life.java.install}
 
-		MyColor.addMenus();
 		MouseCommandManager manager = MouseCommandManager.getInstance();
 		MenuVisitor visitor = new MenuVisitor();
 		manager.addMenus(visitor);
 		MySpeed.getInstance().addMenus(visitor);
+		MyColor.getInstance().addMenus(visitor);
 		setPreferredSize(new Dimension(900, 800));
 
 
