@@ -1,7 +1,9 @@
 package com.holub.life.Theme;
 
 import java.awt.*;
+import java.awt.event.MouseEvent;
 
+import com.holub.life.Cell;
 import com.holub.life.Universe;
 import com.holub.ui.*;
 public class MyColor {
@@ -34,11 +36,17 @@ public class MyColor {
         themeAdder.addTheme(new Red());
     }
 
-//set theme 부분
-public void setTheme(ITheme t) {
+    //set theme 부분
+    public void setTheme(ITheme t) {
         this.t = t;
+        Universe.instance().repaint();
 
-}
+    }
+    public void executeMouseEvent(MouseEvent e, Cell cell) {
+        int a = e.getButton();
+        System.out.println(a);
+
+    }
 
     public ITheme getT() {
         return t;
