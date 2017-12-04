@@ -3,9 +3,11 @@ package com.holub.life;
 import java.awt.*;
 import javax.swing.*;
 
+import com.holub.life.mouse.DefaultCommand;
 import com.holub.life.mouse.MouseCommandManager;
 import com.holub.life.Theme.MyColor;
 import com.holub.ui.MenuSite;
+import com.holub.ui.MenuVisitor;
 
 /*******************************************************************
  * An implemenation of Conway's Game of Life.
@@ -49,8 +51,9 @@ public final class Life extends JFrame {
 		getContentPane().add(Universe.instance(), BorderLayout.CENTER); //{=life.java.install}
 
 		MyColor.addMenus();
-		MouseCommandManager.addMenus();
-
+		MouseCommandManager manager = MouseCommandManager.getInstance();
+		MenuVisitor visitor = new MenuVisitor();
+		manager.addMenus(visitor);
 		setPreferredSize(new Dimension(900, 800));
 
 
