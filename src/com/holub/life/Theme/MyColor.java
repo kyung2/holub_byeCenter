@@ -42,11 +42,6 @@ public class MyColor {
         Universe.instance().repaint();
 
     }
-    public void executeMouseEvent(MouseEvent e, Cell cell) {
-        int a = e.getButton();
-        System.out.println(a);
-
-    }
 
     public ITheme getT() {
         return t;
