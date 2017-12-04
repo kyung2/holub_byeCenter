@@ -15,7 +15,7 @@ public class DefaultSize {
         this.cellSize = cellSize;
     }
 
-    public static DefaultSize getInstance(int gridSize, int cellSize){
+    public synchronized static DefaultSize getInstance(int gridSize, int cellSize){
         if(uniqeInstance == null)
             uniqeInstance = new DefaultSize(gridSize, cellSize);
         return uniqeInstance;
@@ -35,7 +35,7 @@ public class DefaultSize {
         return this.cellSize;
     }
 
-    public static DefaultSize changeSize(int gridSize, int cellSize){
+    public synchronized static DefaultSize changeSize(int gridSize, int cellSize){
         if(uniqeInstance != null){
             uniqeInstance = null;
         }
