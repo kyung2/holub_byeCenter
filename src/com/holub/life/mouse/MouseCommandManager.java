@@ -78,6 +78,12 @@ public class MouseCommandManager
                 getInstance().setMouse2(new AlwaysDieCommand());
             }
         });
+        MenuSite.addLine(getInstance(), "Mouse:CenterClick", "Tick", new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                getInstance().setMouse2(new TickCommand());
+            }
+        });
 
     }
 
