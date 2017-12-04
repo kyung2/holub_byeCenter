@@ -10,7 +10,7 @@ public class Green implements ITheme {
     Color c;
     public String getName() {
 
-        return "Green";
+        return "메생이";
     }
 
     public Color getLive_Color() {

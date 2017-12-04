@@ -10,41 +10,41 @@ public class DefaultTheme implements ITheme {
     Color c;
     public String getName() {
 
-        return "Green";
+        return "Defualt";
     }
 
-    public Color getLive_Color() {
-        c= new Color(255,168,190);
 
-        return c;
+    public Color getLive_Color() {
+      //  c= new Color(255,168,190);
+
+        return Color.RED;
     }
 
     public Color getDead_Color() {
 
-        return Colors.GREENERY;
+        return Colors.LIGHT_YELLOW;
     }
 
     public Color getBorder_Color() {
 
-
-        return Colors.BLAZINGORANGE;
+        return Colors.DARK_YELLOW;
     }
 
     //Neighborhood 색깔 지정
     public Color getRedraw_Graphic() {
 
-        return Colors.BLAZINGORANGE;
+        return Colors.LIGHT_ORANGE;
     }
 
     public Color getRedraw_Selection_Graphic() {
-        c= new Color(178,57,88);
+       // c= new Color(178,57,88);
 
-        return c;
+        return Color.BLUE;
     }
 
     //universe //backgroud 는 어차피 덮히니까..
     public Color getBackGround_Color (){
-        return Colors.ALICEBLUE;
+        return Color.white;
     };
 
 }
