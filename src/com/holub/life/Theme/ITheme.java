@@ -44,6 +44,7 @@ public interface ITheme {
     public Color getBorder_Color (); //게임판색깔
 
     //Neighborhood 색깔 지정 //-> cell의 영역표시하는 줄 색깔 지저
+    //Border색상과 동일하게
     public Color getRedraw_Graphic();
     public Color getRedraw_Selection_Graphic();
 
