@@ -182,4 +182,26 @@ public class MenuVisitor implements MyVisitor{
             }
         });
     }
+    @Override
+    public void visit(PlayNStopCommand command) {
+        MouseCommandManager manager = MouseCommandManager.getInstance();
+        MenuSite.addLine(manager, "Mouse:LeftClick", command.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                manager.setMouse1(command);
+            }
+        });
+        MenuSite.addLine(manager, "Mouse:RightClick", command.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                manager.setMouse3(command);
+            }
+        });
+        MenuSite.addLine(manager, "Mouse:CenterClick", command.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                manager.setMouse2(command);
+            }
+        });
+    }
 }

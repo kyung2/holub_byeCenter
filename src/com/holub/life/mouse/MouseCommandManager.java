@@ -26,6 +26,7 @@ public class MouseCommandManager
         commands.add(new AlwaysDieCommand());
         commands.add(new AlwaysAliveCommand());
         commands.add(new TickCommand());
+        commands.add(new PlayNStopCommand());
     }
     public static MouseCommandManager getInstance(){
         if(mouseCommandManager==null)mouseCommandManager=new MouseCommandManager();
