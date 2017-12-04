@@ -22,13 +22,12 @@ public class Blue implements ITheme {
         return Colors.ISLAND_PARADISE;
     }
     public Color getBorder_Color () {
-        c = new Color (255,255,255);
-        return c;
+        return Colors.WHITE;
     }
     //Neighborhood 색깔 지정
     public Color getRedraw_Graphic() {
 
-        return Colors.DARK_BLUE;
+        return Colors.WHITE;
     }
     public Color getRedraw_Selection_Graphic() {
 

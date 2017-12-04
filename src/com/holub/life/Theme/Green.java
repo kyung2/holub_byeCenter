@@ -33,7 +33,7 @@ public class Green implements ITheme {
     //Neighborhood 색깔 지정
     public Color getRedraw_Graphic() {
 
-        return Colors.GREENERY;
+        return Colors.BLAZINGORANGE;
     }
 
     public Color getRedraw_Selection_Graphic() {

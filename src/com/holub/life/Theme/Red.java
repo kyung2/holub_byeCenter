@@ -26,7 +26,8 @@ public class Red implements ITheme {
     }
     //Neighborhood 색깔 지정
     public Color getRedraw_Graphic() {
-        c= new Color(255,72,13);
+        c= new Color(232,0,90);
+
         return c;
     }
 
