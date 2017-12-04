@@ -1,5 +1,6 @@
 package com.holub.life.Theme;
 
+import com.holub.life.Universe;
 import com.holub.ui.MenuSite;
 
 import java.awt.event.ActionEvent;
@@ -10,7 +11,9 @@ public class ThemeAdder {
         MenuSite.addLine(this, "Color", theme.getName(), new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MyColor.getInstance().getT();
+                MyColor.getInstance().setTheme(theme);
+                Universe.instance().paint(Universe.instance().getGraphics());
+//                MyColor.getInstance().getT();
             }
         });
     }
