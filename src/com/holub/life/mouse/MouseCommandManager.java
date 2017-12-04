@@ -1,14 +1,9 @@
 package com.holub.life.mouse;
 
 import com.holub.life.Cell;
-import com.holub.life.Command;
-import com.holub.ui.MenuSite;
 import com.holub.ui.MyVisitor;
 import com.holub.ui.VisitorElement;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
