@@ -1,5 +1,6 @@
 package com.holub.ui;
 
+import com.holub.life.Clock;
 import com.holub.life.Theme.Blue;
 import com.holub.life.Theme.DefaultTheme;
 import com.holub.life.Theme.Green;
@@ -33,27 +34,61 @@ public class MenuVisitor implements MyVisitor{
 
     @Override
     public void visit(Fast speed) {
-
+        MenuSite.addLine(this, "Go:속도설정", speed.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MySpeed.getInstance().setThisSpeed(speed);
+//                Clock.instance().startTicking(speed.getPeriod());
+            }
+        });
     }
 
     @Override
     public void visit(Slow speed) {
-
+        MenuSite.addLine(this, "Go:속도설정", speed.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MySpeed.getInstance().setThisSpeed(speed);
+//                Clock.instance().startTicking(speed.getPeriod());
+            }
+        });
     }
 
     @Override
     public void visit(Medium speed) {
+        MenuSite.addLine(this, "Go:속도설정", speed.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
 
+
+                MySpeed.getInstance().setThisSpeed(speed);
+//                Clock.instance().startTicking(speed.getPeriod());
+            }
+        });
     }
 
     @Override
     public void visit(Agonizing speed) {
 
+        MenuSite.addLine(this, "Go:속도설정", speed.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                MySpeed.getInstance().setThisSpeed(speed);
+//                Clock.instance().startTicking(speed.getPeriod());
+            }
+        });
     }
 
     @Override
     public void visit(EzraMiller speed) {
-
+        MenuSite.addLine(this, "Go:속도설정", speed.getMenuName(), new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MySpeed.getInstance().setThisSpeed(speed);
+//                Clock.instance().startTicking(speed.getPeriod());
+            }
+        });
     }
 
     @Override

@@ -1,6 +1,9 @@
 package com.holub.life.speed;
 
-public class Agonizing implements Speed {
+import com.holub.ui.MyVisitor;
+import com.holub.ui.VisitorElement;
+
+public class Agonizing implements Speed,VisitorElement {
     @Override
     public String getName() {
         return "agonizing";
@@ -11,5 +14,13 @@ public class Agonizing implements Speed {
         return 500;
     }
 
+    @Override
+    public String getMenuName() {
+        return "Agonizing";
+    }
 
+    @Override
+    public void accept(MyVisitor visitor) {
+        visitor.visit(this);
+    }
 }

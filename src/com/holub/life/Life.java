@@ -6,6 +6,7 @@ import javax.swing.*;
 import com.holub.life.mouse.DefaultCommand;
 import com.holub.life.mouse.MouseCommandManager;
 import com.holub.life.Theme.MyColor;
+import com.holub.life.speed.MySpeed;
 import com.holub.ui.MenuSite;
 import com.holub.ui.MenuVisitor;
 
@@ -54,6 +55,7 @@ public final class Life extends JFrame {
 		MouseCommandManager manager = MouseCommandManager.getInstance();
 		MenuVisitor visitor = new MenuVisitor();
 		manager.addMenus(visitor);
+		MySpeed.getInstance().addMenus(visitor);
 		setPreferredSize(new Dimension(900, 800));
 
 

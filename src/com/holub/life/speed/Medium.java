@@ -1,6 +1,9 @@
 package com.holub.life.speed;
 
-public class Medium implements Speed{
+import com.holub.ui.MyVisitor;
+import com.holub.ui.VisitorElement;
+
+public class Medium implements Speed,VisitorElement{
     @Override
     public String getName() {
         return "medium";
@@ -11,4 +14,13 @@ public class Medium implements Speed{
         return 70;
     }
 
+    @Override
+    public String getMenuName() {
+        return "Medium";
+    }
+
+    @Override
+    public void accept(MyVisitor visitor) {
+        visitor.visit(this);
+    }
 }

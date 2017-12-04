@@ -106,6 +106,7 @@ public class Clock
 	public void stop()
 	{
 		startTicking( 0 );
+		MySpeed.getInstance().setPlaying(false);
 	}
 
 	/** Create the menu that controls the clock speed and
@@ -131,6 +132,8 @@ public class Clock
 
 					if( toDo=='T' )
 						tick();				      // single tick
+					else if (toDo=='P')
+					    startTicking(MySpeed.getInstance().getTickTime());
 					else
 						startTicking(  0 ); // fast
 				}
@@ -140,16 +143,7 @@ public class Clock
 																							// {=midSetup}
 		MenuSite.addLine(this,"Go","Halt",  			modifier);
 		MenuSite.addLine(this,"Go","Tick (Single Step)",modifier);
-//		MenuSite.addLine(this,"Go","Agonizing",	 	  	modifier);
-//		MenuSite.addLine(this,"Go","Slow",		 		modifier);
-//		MenuSite.addLine(this,"Go","Medium",	 	 	modifier);
-//		MenuSite.addLine(this,"Go","Fast",				modifier);
-        SpeedAdder speedAdder = new SpeedAdder();
-        speedAdder.addSpeed(new Agonizing());
-        speedAdder.addSpeed(new Slow());
-        speedAdder.addSpeed(new Medium());
-        speedAdder.addSpeed(new Fast());
-        speedAdder.addSpeed(new EzraMiller());
+		MenuSite.addLine(this,"Go","Play/Stop",modifier);
 // {=endSetup}
 }	//{=endCreateMenus}
 
